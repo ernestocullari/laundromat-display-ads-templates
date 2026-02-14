@@ -11,7 +11,7 @@ I need you to customize the Laundromat Display Ads Templates for a new client. T
 
 /Users/cullari/Desktop/laundromat-display-ads-templates/
 
-There are 16 ad files total — 8 A-variant (Brand Awareness, with floating bubbles) in the `a/` folder and 8 B-variant (Service-Focused, with suds/bubbles) in the `b/` folder. Each ad is a self-contained `index.html` inside a size folder with a `media/` subfolder for the logo.
+There are 24 ad files total — 12 A-variant (Brand Awareness, with floating bubbles) in the `a/` folder and 12 B-variant (Service-Focused, with suds/bubbles) in the `b/` folder. Each ad is a self-contained `index.html` inside a size folder with a `media/` subfolder for the logo.
 
 Here is the new client's brand information:
 
@@ -62,7 +62,7 @@ Here is the new client's brand information:
 
 3. **Font**: Update the Google Fonts `<link href="...">` URL to load the new font. Replace all `font-family: 'Inter', sans-serif` with the new font family. Remove the `<!-- {{FONT_FAMILY}} -->` comment.
 
-4. **Logo**: Copy the client's logo file into every `media/` folder (all 16 of them) as `logo.png`.
+4. **Logo**: Copy the client's logo file into every `media/` folder (all 24 of them) as `logo.png`.
 
 5. **Business info**: Update the persistent brand text, phase 1 display text, address, hours, rating, and review count in both the HTML default text and the `translations` JavaScript object (both `en` and `es` keys).
 
@@ -74,10 +74,10 @@ Here is the new client's brand information:
 
 9. **Preview pages**: Update `preview-a.html` and `preview-b.html` titles, subtitles, and the localStorage key in the `setLang()` function.
 
-10. **Phase 1 sizing**: After injecting the brand name, check that the phase 1 text fits within each ad size. The tall ads (160x600, 300x600) stack words vertically — keep each word short. The wide ads (970x250, 728x90, 320x50) display on one line — the brand name must fit. If text overflows, reduce font sizes in the `.phase1-word`, `.phase1-name`, or `.phase1-line1` CSS classes for the affected sizes.
+10. **Phase 1 sizing**: After injecting the brand name, check that the phase 1 text fits within each ad size. The tall ads (120x600, 160x600, 300x600, 320x480) stack words vertically — keep each word short. The wide ads (970x250, 728x90, 320x50) display on one line — the brand name must fit. If text overflows, reduce font sizes in the `.phase1-word`, `.phase1-name`, or `.phase1-line1` CSS classes for the affected sizes.
 
 11. **Verify**: Open `preview-a.html` and `preview-b.html` in a browser. Confirm:
-    - All 16 ads render with correct colors, font, and logo
+    - All 24 ads render with correct colors, font, and logo
     - Phase 1 text doesn't overflow any ad size
     - Language toggle switches EN/ES correctly
     - Animations play (bubbles on A, suds on B)

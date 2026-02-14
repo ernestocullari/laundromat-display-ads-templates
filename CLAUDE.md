@@ -1,24 +1,28 @@
 # Laundromat Display Ads Templates
 
-This repo contains 16 DSP-ready HTML5 display ad templates for laundromat businesses. 8 A-variant (Brand Awareness, floating bubbles) in `a/` and 8 B-variant (Service-Focused, suds/bubbles) in `b/`. Each ad is a self-contained `index.html` + `media/logo.png` inside a size folder.
+This repo contains 24 DSP-ready HTML5 display ad templates for laundromat businesses. 12 A-variant (Brand Awareness, floating bubbles) in `a/` and 12 B-variant (Service-Focused, suds/bubbles) in `b/`. Each ad is a self-contained `index.html` + `media/logo.png` inside a size folder.
 
 ## Template Structure
 
 ```
 a/ and b/ each contain:
 ├── 970x250/   (Billboard)
+├── 970x90/    (Super Leaderboard)
 ├── 728x90/    (Leaderboard)
+├── 468x60/    (Full Banner)
 ├── 320x50/    (Mobile Leaderboard)
 ├── 300x250/   (Medium Rectangle)
 ├── 336x280/   (Large Rectangle)
 ├── 250x250/   (Square)
+├── 120x600/   (Skyscraper)
 ├── 160x600/   (Wide Skyscraper)
-└── 300x600/   (Half Page)
+├── 300x600/   (Half Page)
+└── 320x480/   (Mobile Interstitial)
 ```
 
 ## How to Customize for a New Brand
 
-When the user asks to customize these templates for a new laundromat client, follow these steps exactly:
+When the user asks to customize these templates for a new laundromat client, follow these steps exactly (all 24 ad files + 2 preview files):
 
 ### 1. Gather Brand Info
 
@@ -44,13 +48,13 @@ Ask the user to provide (or extract from materials they share):
 
 Copy this entire directory to a new folder named for the client before making changes. Never modify the templates in place.
 
-### 3. Apply Changes (all 16 ad files + 2 preview files)
+### 3. Apply Changes (all 24 ad files + 2 preview files)
 
 **Colors**: Search for `/* {{PRIMARY_DARK}} */`, `/* {{PRIMARY_LIGHT}} */`, `/* {{ACCENT}} */`, `/* {{ACCENT_HIGHLIGHT}} */`, `/* {{CTA_TEXT_COLOR}} */`, and `/* {{ACCENT_RGBA}} */` comments in CSS. Replace the hex value before each comment with the new brand color. For `{{ACCENT_RGBA}}`, convert the accent hex to `rgba(R,G,B,`. Remove the placeholder comments after replacing.
 
 **Font**: Update the Google Fonts `<link href="...">` URL. Replace all `font-family: 'Inter', sans-serif` with the new font. Remove the `<!-- {{FONT_FAMILY}} -->` comment.
 
-**Logo**: Copy the client's logo into every `media/` folder (all 16) as `logo.png`.
+**Logo**: Copy the client's logo into every `media/` folder (all 24) as `logo.png`.
 
 **Business info**: Update persistent brand text, phase 1 display text, address, hours, rating, review count in both HTML and the `translations` JS object (`en` and `es` keys).
 
@@ -65,8 +69,8 @@ Copy this entire directory to a new folder named for the client before making ch
 ### 4. Check Phase 1 Sizing
 
 After injecting the brand name, verify the phase 1 text fits each ad size:
-- **Tall ads** (160x600, 300x600) stack words vertically with `.phase1-word` — keep each word short
-- **Wide ads** (970x250, 728x90, 320x50) display on one line with `.phase1-name` — brand name must fit
+- **Tall ads** (120x600, 160x600, 300x600, 320x480) stack words vertically with `.phase1-word` — keep each word short
+- **Wide ads** (970x250, 970x90, 728x90, 468x60, 320x50) display on one line with `.phase1-name` — brand name must fit
 - **Rect ads** (300x250, 336x280, 250x250) use `.phase1-line1` and `.phase1-line2` — two short lines
 
 If text overflows, reduce font sizes in the relevant CSS classes for affected sizes.
@@ -74,7 +78,7 @@ If text overflows, reduce font sizes in the relevant CSS classes for affected si
 ### 5. Verify
 
 Open `preview-a.html` and `preview-b.html` in a browser. Confirm:
-- All 16 ads render with correct colors, font, and logo
+- All 24 ads render with correct colors, font, and logo
 - Phase 1 text doesn't overflow any ad size
 - Language toggle switches EN/ES correctly
 - Animations play (bubbles on A, suds on B)
@@ -84,7 +88,7 @@ Open `preview-a.html` and `preview-b.html` in a browser. Confirm:
 
 Zip each size folder individually for DSP upload:
 ```bash
-for size in 970x250 728x90 320x50 300x250 336x280 250x250 160x600 300x600; do
+for size in 970x250 970x90 728x90 468x60 320x50 300x250 336x280 250x250 120x600 160x600 300x600 320x480; do
   cd "a/$size" && zip -r "../../a-${size}.zip" . -x ".*" && cd ../..
   cd "b/$size" && zip -r "../../b-${size}.zip" . -x ".*" && cd ../..
 done
@@ -92,7 +96,7 @@ done
 
 ## Efficiency Tips
 
-- Use parallel Task agents grouped by shape: wide (970x250, 728x90, 320x50), rectangle (300x250, 336x280, 250x250), tall (160x600, 300x600)
+- Use parallel Task agents grouped by shape: wide (970x250, 970x90, 728x90, 468x60, 320x50), rectangle (300x250, 336x280, 250x250), tall (120x600, 160x600, 300x600, 320x480)
 - A and B variants share the same phase 1 brand display — edit both in the same pass
 - The `translations` JS object in each file contains all translatable text — this is the single source of truth for content
 

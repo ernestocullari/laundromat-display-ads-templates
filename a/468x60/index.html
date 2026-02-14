@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=468,height=60">
+    <title>Laundromat Display Ad - A 468x60</title>
+    <script type="text/javascript">
+        var clickTag = "{{clickMacro}}";
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- {{FONT_FAMILY}}: Change href below and update font-family in CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 468px; height: 60px; overflow: hidden; }
+        .ad-container { width: 468px; height: 60px; background: linear-gradient(135deg, #1A5B8A /* {{PRIMARY_DARK}} */ 0%, #2980B9 /* {{PRIMARY_LIGHT}} */ 50%, #1A5B8A /* {{PRIMARY_DARK}} */ 100%); position: relative; overflow: hidden; cursor: pointer; font-family: 'Inter', sans-serif; }
+        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 10px; animation: phase1 3s ease-in-out forwards; }
+        @keyframes phase1 { 0% { opacity: 0; } 10% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-name { font-size: 26px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
+        .phase1-address { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); margin-top: 2px; white-space: nowrap; }
+        .persistent-brand { position: absolute; bottom: 3px; left: 0; width: 100%; text-align: center; font-size: 8px; font-weight: 800; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
+        .phase1-5 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; animation: phase1-5 3s ease-in-out 3s forwards; }
+        @keyframes phase1-5 { 0% { opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-5 .headline-text { font-size: 20px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; line-height: 1; }
+        .phase2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; opacity: 0; animation: phase2 9s ease-out 6s forwards; }
+        @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
+        .left-group { display: flex; align-items: center; gap: 8px; opacity: 0; animation: fadeIn 0.4s ease-out 6.2s forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .logo { width: 34px; height: 34px; object-fit: contain; flex-shrink: 0; }
+        .headline-stack { display: flex; flex-direction: column; line-height: 0.9; }
+        .headline-stack .headline-white { font-size: 16px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; }
+        .headline-stack .headline-accent { font-size: 16px; font-weight: 800; color: #F39C12 /* {{ACCENT}} */; text-transform: uppercase; }
+        .center-group { display: flex; align-items: center; gap: 8px; opacity: 0; animation: fadeIn 0.4s ease-out 6.4s forwards; }
+        .offer-item { text-align: center; }
+        .offer-value { font-size: 18px; font-weight: 800; color: #FFFFFF; line-height: 1; }
+        .offer-label { font-size: 8px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 2px; }
+        .cta-button { flex-shrink: 0; background: #F39C12 /* {{ACCENT}} */; color: #1A1A2E /* {{CTA_TEXT_COLOR}} */; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 10px 14px; border: none; border-radius: 4px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 6.5s forwards, pulse 2s ease-in-out 7s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(243,156,18, /* {{ACCENT_RGBA}} */0.6); } 50% { box-shadow: 0 0 0 6px rgba(243,156,18, /* {{ACCENT_RGBA}} */0); } 100% { box-shadow: 0 0 0 0 rgba(243,156,18, /* {{ACCENT_RGBA}} */0.6); } }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, #F39C12 /* {{ACCENT}} */, #B5DFF5 /* {{ACCENT_HIGHLIGHT}} */); transform: scaleX(0); animation: growLine 0.5s ease-out 6.6s forwards; }
+        @keyframes growLine { to { transform: scaleX(1); } }
+        .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+        .bubble { position: absolute; bottom: -8px; background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; animation: floatUp linear infinite; }
+        @keyframes floatUp { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-80px) translateX(10px); opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
+        <div class="bubbles">
+            <div class="bubble" style="width:14px;height:14px;left:12%;animation-duration:3.5s;animation-delay:0s;"></div>
+            <div class="bubble" style="width:18px;height:18px;left:38%;animation-duration:3s;animation-delay:1s;"></div>
+            <div class="bubble" style="width:22px;height:22px;left:62%;animation-duration:4s;animation-delay:0.5s;"></div>
+            <div class="bubble" style="width:16px;height:16px;left:85%;animation-duration:3.8s;animation-delay:0.8s;"></div>
+        </div>
+        <div class="persistent-brand">YOUR NAME HERE</div>
+        <div class="phase1">
+            <div class="phase1-name">YOUR NAME <span data-i18n="phase1.laundry">HERE</span></div>
+            <div class="phase1-address" data-i18n="phase1.address">123 Main St, Your City, ST</div>
+        </div>
+        <div class="phase1-5">
+            <span class="headline-text" data-i18n="phase1-5.text">SEE THE DIFFERENCE</span>
+        </div>
+        <div class="phase2">
+            <div class="left-group">
+                <img src="media/logo.png" alt="Logo" class="logo">
+                <div class="headline-stack">
+                    <span class="headline-white" data-i18n="headline.see">SEE THE</span>
+                    <span class="headline-accent" data-i18n="headline.difference">DIFFERENCE</span>
+                </div>
+            </div>
+            <div class="center-group">
+                <div class="offer-item">
+                    <div class="offer-value" data-i18n="offer.days">7 DAYS</div>
+                    <div class="offer-label" data-i18n="offer.hours">6AM-10PM</div>
+                </div>
+            </div>
+            <button class="cta-button" data-i18n="cta.visit">VISIT &#8594;</button>
+        </div>
+        <div class="bottom-accent"></div>
+    </div>
+    <script type="text/javascript">
+        var translations = {
+            en: {
+                'phase1.headline1': 'YOUR NEIGHBORHOOD LAUNDRY',
+                'phase1.headline2': 'MODERN EQUIPMENT & FRIENDLY STAFF',
+                'phase1-5.text': 'SEE THE DIFFERENCE',
+                'brand.name': 'Your Laundromat Name',
+                'headline.see': 'SEE THE',
+                'headline.difference': 'DIFFERENCE',
+                'offer.days': '7 DAYS',
+                'offer.hours': '6AM-10PM',
+                'cta.visit': 'VISIT \u2192',
+                'phase1.laundry': 'HERE',
+                'phase1.address': '123 Main St, Your City, ST'
+            },
+            es: {
+                'phase1.headline1': 'LA LAVANDER\u00cdA DE SU VECINDARIO',
+                'phase1.headline2': 'EQUIPO MODERNO Y PERSONAL AMIGABLE',
+                'phase1-5.text': 'VEA LA DIFERENCIA',
+                'brand.name': 'Your Laundromat Name',
+                'headline.see': 'VEA LA',
+                'headline.difference': 'DIFERENCIA',
+                'offer.days': '7 D\u00cdAS',
+                'offer.hours': '6AM-10PM',
+                'cta.visit': 'IR \u2192',
+                'phase1.laundry': 'AQU\u00cd',
+                'phase1.address': '123 Main St, Your City, ST'
+            }
+        };
+
+        function detectLanguage() {
+            var stored = localStorage.getItem('laundromat-lang');
+            if (stored && (stored === 'en' || stored === 'es')) {
+                return stored;
+            }
+            var browserLang = navigator.language || navigator.userLanguage || 'en';
+            return browserLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+        }
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            localStorage.setItem('laundromat-lang', lang);
+        }
+
+        setLanguage(detectLanguage());
+
+        document.getElementById("ad-container").addEventListener("click", function() {
+            window.open(clickTag, "_blank");
+        });
+
+        function restartAnimations() {
+            var container = document.querySelector(".ad-container");
+            var clone = container.cloneNode(true);
+            clone.id = "ad-container";
+            container.parentNode.replaceChild(clone, container);
+            setLanguage(detectLanguage());
+            clone.addEventListener("click", function() {
+                window.open(clickTag, "_blank");
+            });
+        }
+        setInterval(restartAnimations, 15000);
+    </script>
+</body>
+</html>
