@@ -21,7 +21,7 @@
         .phase1-address { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); margin-top: 4px; }
         .phase1-5 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; animation: phase1-5 3s ease-in-out 4s forwards; }
         @keyframes phase1-5 { 0% { opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
-        .phase1-5 .headline-text { font-size: 40px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; line-height: 1; }
+        .phase1-5 .headline-text { font-size: 36px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; line-height: 1; }
         .persistent-brand { position: absolute; bottom: 3px; left: 0; width: 100%; text-align: center; font-size: 8px; font-weight: 800; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
         .phase2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; opacity: 0; animation: phase2 9s ease-out 7s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
@@ -105,7 +105,7 @@
                 'phase1.address': '624 W Alamo St, Brenham, TX'
             },
             es: {
-                'phase1.headline1': 'DEJA TU ROPA',
+                'phase1.headline1': 'DEJE SU ROPA',
                 'phase1.headline2': 'NOSOTROS LA LAVAMOS',
                 'phase1-5.text': 'LAVAR-SECAR-DOBLAR DESDE $1/LB',
                 'brand.name': 'Alamo Laundry',
@@ -141,6 +141,10 @@
         }
 
         setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
 
         document.getElementById("ad-container").addEventListener("click", function() {
             window.open(clickTag, "_blank");
@@ -156,6 +160,7 @@
                 window.open(clickTag, "_blank");
             });
         }
+        
         setInterval(restartAnimations, 15000);
     </script>
 </body>

@@ -52,6 +52,7 @@
         .suds-pop { position: absolute; bottom: 24px; border-radius: 50%; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.35); animation: sudsPop ease-out infinite; }
         @keyframes foamWave { 0% { transform: translateX(-3%); } 100% { transform: translateX(3%); } }
         @keyframes sudsPop { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 0.8; transform: translateY(-60px) scale(0.7); } 100% { opacity: 0; transform: translateY(-90px) scale(0.3); } }
+            .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .divider, .offer-column, .offer-row { display: none !important; }
     </style>
 </head>
 <body>
@@ -66,14 +67,13 @@
         </div>
         <div class="phase2">
             <div class="headline-top">
-                <div class="headline-line headline-white" data-i18n="headline.see1">DROP</div>
-                <div class="headline-line headline-white" data-i18n="headline.see2">OFF</div>
+                <div class="headline-line headline-white" data-i18n="headline.see">DROP OFF</div>
             </div>
             <div class="logo-section">
                 <img src="media/logo.png" alt="Logo" class="logo">
             </div>
             <div class="headline-bottom">
-                <div class="headline-line headline-accent" data-i18n="headline.difference">FRESH</div>
+                <div class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</div>
             </div>
             <div class="offer-column">
                 <div class="offer-item">
@@ -150,6 +150,10 @@
         }
 
         setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
 
         document.getElementById("ad-container").addEventListener("click", function() {
             window.open(clickTag, "_blank");
@@ -165,6 +169,7 @@
                 window.open(clickTag, "_blank");
             });
         }
+        
         setInterval(restartAnimations, 15000);
     </script>
 </body>

@@ -55,7 +55,7 @@
         </div>
         <div class="phase2">
             <img src="media/logo.png" alt="Logo" class="logo">
-            <div class="badge" data-i18n="badge.stars">Wash-Dry-Fold</div>
+            <div class="badge" data-i18n="badge.stars">Wash & Fold</div>
             <div class="headline-group">
                 <div class="headline-line headline-white" data-i18n="headline.see">DROP OFF</div>
                 <div class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</div>
@@ -121,6 +121,10 @@
         }
 
         setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
 
         document.getElementById("ad-container").addEventListener("click", function() {
             window.open(clickTag, "_blank");
@@ -136,6 +140,7 @@
                 window.open(clickTag, "_blank");
             });
         }
+        
         setInterval(restartAnimations, 15000);
     </script>
 </body>

@@ -129,6 +129,10 @@
         }
 
         setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
 
         document.getElementById("ad-container").addEventListener("click", function() {
             window.open(clickTag, "_blank");
@@ -144,6 +148,7 @@
                 window.open(clickTag, "_blank");
             });
         }
+        
         setInterval(restartAnimations, 15000);
     </script>
 </body>

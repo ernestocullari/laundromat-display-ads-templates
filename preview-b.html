@@ -119,11 +119,7 @@
         function restartAll() {
             var iframes = document.querySelectorAll('iframe');
             iframes.forEach(function(iframe) {
-                try {
-                    iframe.contentWindow.restartAnimations();
-                } catch(e) {
-                    iframe.src = iframe.src;
-                }
+                try { iframe.contentWindow.postMessage({ type: 'restart' }, '*'); } catch(e) { iframe.src = iframe.src; }
             });
         }
     </script>

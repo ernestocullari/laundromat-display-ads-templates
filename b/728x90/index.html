@@ -105,7 +105,7 @@
                 'phase1.address': '624 W Alamo St, Brenham, TX'
             },
             es: {
-                'phase1.headline1': 'DEJA TU ROPA',
+                'phase1.headline1': 'DEJE SU ROPA',
                 'phase1.headline2': 'NOSOTROS LA LAVAMOS',
                 'phase1-5.text': 'LAVAR-SECAR-DOBLAR DESDE $1/LB',
                 'brand.name': 'Alamo Laundry',
@@ -141,6 +141,10 @@
         }
 
         setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
 
         document.getElementById("ad-container").addEventListener("click", function() {
             window.open(clickTag, "_blank");
@@ -156,6 +160,7 @@
                 window.open(clickTag, "_blank");
             });
         }
+        
         setInterval(restartAnimations, 15000);
     </script>
 </body>
