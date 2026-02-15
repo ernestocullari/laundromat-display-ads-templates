@@ -25,7 +25,7 @@
         .persistent-brand { position: absolute; bottom: 3px; left: 0; width: 100%; text-align: center; font-size: 8px; font-weight: 800; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
         .phase2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; opacity: 0; animation: phase2 9s ease-out 7s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
-        .left-group { display: flex; align-items: center; gap: 12px; opacity: 0; animation: fadeIn 0.5s ease-out 7.2s forwards; }
+        .left-group { display: flex; align-items: center; gap: 12px; flex: 1; justify-content: center; opacity: 0; animation: fadeIn 0.5s ease-out 7.2s forwards; }
         @keyframes fadeIn { to { opacity: 1; } }
         .logo { filter: brightness(0) invert(1) sepia(1) saturate(50) hue-rotate(2deg) brightness(0.95); width: 110px; height: auto; object-fit: contain; flex-shrink: 0; }
         .headline-stack { display: flex; flex-direction: column; line-height: 0.85; }
@@ -62,7 +62,7 @@
                 <img src="media/logo.png" alt="Logo" class="logo">
                 <div class="headline-stack">
                     <div class="headline-white" data-i18n="headline.top">DROP OFF</div>
-                    <div class="headline-accent" data-i18n="headline.bottom">PICK UP FRESH</div>
+                    <div class="headline-accent" data-i18n="headline.bottom">PICK-UP FRESH</div>
                 </div>
             </div>
             <div class="center-group">
@@ -95,7 +95,7 @@
                 'phase1-5.text': 'WASH-DRY-FOLD FROM $1/LB',
                 'brand.name': 'Alamo Laundry',
                 'headline.top': 'DROP OFF',
-                'headline.bottom': 'PICK UP FRESH',
+                'headline.bottom': 'PICK-UP FRESH',
                 'offer.days': 'OPEN 7 DAYS',
                 'offer.hours': '6AM \u2013 10PM',
                 'offer.stars': '5.0 \u2605',

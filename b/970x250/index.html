@@ -42,9 +42,9 @@
         .divider { width: 1px; height: 160px; background: rgba(255,255,255,0.15); flex-shrink: 0; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
 
         /* Center */
-        .center { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+        .center { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; }
         .headline-group { opacity: 0; animation: fadeIn 0.4s ease-out 4.4s forwards; }
-        .headline-line { font-size: 26px; font-weight: 800; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
+        .headline-line { font-size: 52px; font-weight: 800; text-transform: uppercase; line-height: 1.05; letter-spacing: -0.02em; white-space: nowrap; }
         .headline-white { color: #FFFFFF; }
         .headline-accent { color: #5DADE2; }
         .sub-headline { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 4.5s forwards; }
@@ -93,7 +93,8 @@
             <div class="divider"></div>
             <div class="center">
                 <div class="headline-group">
-                    <span class="headline-line headline-white" data-i18n="headline.see">DROP OFF </span><span class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</span>
+                    <div class="headline-line headline-white" data-i18n="headline.see">DROP OFF</div>
+                    <div class="headline-line headline-accent" data-i18n="headline.difference">PICK-UP FRESH</div>
                 </div>
                 <div class="sub-headline" data-i18n="subhead">From $1/lb first-time &#8226; 24/7 smart lockers</div>
                 <div class="props-row">
@@ -136,7 +137,7 @@
                 'phase1.tagline': 'Try Wash-Dry-Fold.',
                 'brand.name': 'Alamo Laundry',
                 'headline.see': 'DROP OFF',
-                'headline.difference': 'PICK UP FRESH',
+                'headline.difference': 'PICK-UP FRESH',
                 'subhead': 'From $1/lb first-time \u2022 24/7 smart lockers',
                 'prop.attended': 'From $1/lb',
                 'prop.renovated': '24/7 Smart Lockers',

@@ -25,7 +25,7 @@
         .phase1-5 .headline-text { font-size: 14px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; line-height: 1; }
         .phase2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; opacity: 0; animation: phase2 9s ease-out 7s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
-        .left-group { display: flex; align-items: center; gap: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 7.2s forwards; }
+        .left-group { display: flex; align-items: center; gap: 6px; flex: 1; justify-content: center; opacity: 0; animation: fadeIn 0.4s ease-out 7.2s forwards; }
         @keyframes fadeIn { to { opacity: 1; } }
         .logo { filter: brightness(0) invert(1) sepia(1) saturate(50) hue-rotate(2deg) brightness(0.95); width: 70px; height: auto; object-fit: contain; flex-shrink: 0; }
         .headline-stack { display: flex; flex-direction: column; line-height: 0.9; }
@@ -60,7 +60,7 @@
                 <img src="media/logo.png" alt="Logo" class="logo">
                 <div class="headline-stack">
                     <span class="headline-white" data-i18n="headline.top">DROP OFF</span>
-                    <span class="headline-accent" data-i18n="headline.bottom">PICK UP FRESH</span>
+                    <span class="headline-accent" data-i18n="headline.bottom">PICK-UP FRESH</span>
                 </div>
             </div>
             <div class="center-group">
@@ -86,7 +86,7 @@
                 'phase1-5.text': 'WASH-DRY-FOLD FROM $1/LB',
                 'brand.name': 'Alamo Laundry',
                 'headline.top': 'DROP OFF',
-                'headline.bottom': 'PICK UP FRESH',
+                'headline.bottom': 'PICK-UP FRESH',
                 'offer.days': 'OPEN 7 DAYS',
                 'offer.hours': '6AM \u2013 10PM',
                 'cta.action': 'TRY IT \u2192',
