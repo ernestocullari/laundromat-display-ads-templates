@@ -109,21 +109,14 @@
             document.getElementById('btn-es').classList.toggle('active', lang === 'es');
             var iframes = document.querySelectorAll('iframe');
             iframes.forEach(function(iframe) {
-                try {
-                    iframe.contentWindow.localStorage.setItem('washworks-lang', lang);
-                    iframe.contentWindow.setLanguage(lang);
-                } catch(e) {}
+                try { iframe.contentWindow.postMessage({ type: 'setLang', lang: lang }, '*'); } catch(e) {}
             });
         }
 
         function restartAll() {
             var iframes = document.querySelectorAll('iframe');
             iframes.forEach(function(iframe) {
-                try {
-                    iframe.contentWindow.restartAnimations();
-                } catch(e) {
-                    iframe.src = iframe.src;
-                }
+                try { iframe.contentWindow.postMessage({ type: 'restart' }, '*'); } catch(e) { iframe.src = iframe.src; }
             });
         }
     </script>
