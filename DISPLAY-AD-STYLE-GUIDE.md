@@ -25,24 +25,69 @@ The 12 sizes fall into 4 layout categories, each with different HTML structure, 
 
 ## 3. Color System
 
+### Brand Palette (from washworksma-landing site)
+
+| Token | Hex | RGB | Role |
+|-------|-----|-----|------|
+| **Cyan** (Primary) | `#42B6ED` | `rgb(66,182,237)` | Phase 1 background, gradient endpoints, bottom accent bar end |
+| **Cyan Light** | `#5EC1EF` | `rgb(94,193,239)` | Gradient light end, hover states |
+| **Cyan Pale** | `#E8F6FD` | `rgb(232,246,253)` | Website section backgrounds (not used in ads) |
+| **Amber** (Accent) | `#FFAB23` | `rgb(255,171,35)` | CTA buttons, accent text, badges, Phase 1 category word, bottom accent bar start |
+| **Amber Hover** | `#E89A10` | `rgb(232,154,16)` | Website button hover (not used in ads) |
+| **Blue Dark** | `#2C5A9E` | `rgb(44,90,158)` | Headline line 1 in Phase 2 |
+| **Medium Blue** | `#4375BA` | `rgb(67,117,186)` | Website supporting blue (not used in ads) |
+| **Teal** | `#0497C3` | `rgb(4,151,195)` | Website alternate accent (not used in ads) |
+| **Charcoal** | `#192226` | `rgb(25,34,38)` | Phase 1 address text, website dark sections |
+| **Text Dark** | `#2D3436` | `rgb(45,52,54)` | Website body text (not used in ads) |
+| **Text Light** | `#636E72` | `rgb(99,110,114)` | Website secondary text (not used in ads) |
+| **White** | `#FFFFFF` | `rgb(255,255,255)` | Phase 2 background, Phase 1 brand name, CTA button text |
+| **Cream** | `#F6F5F3` | `rgb(246,245,243)` | Website footer text (not used in ads) |
+| **Border Gray** | `#DCDCDA` | `rgb(220,220,218)` | Website dividers (not used in ads) |
+
+### Ad Color Assignments
+
 | Role | Value | Where Used |
 |------|-------|-----------|
-| Phase 1 background | Brand primary (e.g. `#42B6ED`) | Phase 1 full background |
+| Phase 1 background | `#42B6ED` (Cyan) | Phase 1 full background |
 | Phase 2 background | `#FFFFFF` | Phase 2 full background — required for logos with white/transparent backgrounds |
 | Phase 1 brand name | `#FFFFFF` | Brand name text in Phase 1 |
-| Phase 1 accent word | Accent color (e.g. `#FFAB23`) | Category word ("LAUNDROMATS") in Phase 1 |
-| Phase 1 address | `#192226` (charcoal) | Location text in Phase 1 |
-| Headline line 1 | Dark brand color (e.g. `#2C5A9E`) | First headline in Phase 2 |
-| Headline line 2 | Accent color (e.g. `#FFAB23`) | Second headline in Phase 2 |
-| CTA button fill | Accent color (e.g. `#FFAB23`) | Button background |
+| Phase 1 accent word | `#FFAB23` (Amber) | Category word ("LAUNDROMATS") in Phase 1 |
+| Phase 1 address | `#192226` (Charcoal) | Location text in Phase 1 |
+| Headline line 1 | `#2C5A9E` (Blue Dark) | First headline in Phase 2 |
+| Headline line 2 | `#FFAB23` (Amber) | Second headline in Phase 2 |
+| CTA button fill | `#FFAB23` (Amber) | Button background |
 | CTA button text | `#FFFFFF` | Button text |
-| Bottom accent bar | `linear-gradient(90deg, accent, brand-primary)` | 2–3px bar at bottom edge |
+| CTA pulse glow | `rgba(255,171,35,0.6)` | Pulse animation box-shadow |
+| Badge background | `#FFAB23` (Amber) | Badge pill background (billboard only) |
+| Badge text | `#FFFFFF` | Badge text |
+| Bubble fill (A variant) | `rgba(255,255,255,0.22)` | Floating bubble background |
+| Bubble border (A variant) | `rgba(255,255,255,0.3)` | Floating bubble stroke |
+| Suds foam (B variant) | `rgba(255,255,255,0.15)` / `rgba(255,255,255,0.10)` | Foam wave layers |
+| Suds pop (B variant) | `rgba(255,255,255,0.25)` | Popping bubble fill |
+| Bottom accent bar | `linear-gradient(90deg, #FFAB23, #42B6ED)` | 2–3px bar at bottom edge |
 
 ---
 
 ## 4. Typography
 
-**Font**: Roboto (or brand font), loaded via Google Fonts with weights 600, 700, 800, 900.
+### Website Fonts (reference)
+
+| Role | Font Family | Source |
+|------|-------------|--------|
+| Headlines | Roboto | Google Fonts |
+| Body | Niramit | Google Fonts |
+| Pricing/Numbers | Catamaran | Google Fonts |
+| Fallback stack | Source Sans Pro → Arial → sans-serif | — |
+
+### Ad Font (all sizes)
+
+**Font**: Roboto, loaded via Google Fonts with weights 600, 700, 800, 900.
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700;800;900&display=swap" rel="stylesheet">
+```
+
+Only Roboto is used in the ads (not Niramit or Catamaran) to minimize file size for DSP delivery.
 
 All headlines and CTA text are `uppercase` with `font-weight: 800`.
 Address and body text use `font-weight: 600`.
