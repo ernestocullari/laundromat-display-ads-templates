@@ -1,0 +1,8 @@
+.git
+.gitignore
+*.md
+!preview-a.html
+!preview-b.html
+PROMPT.md
+README-TEMPLATE.md
+CLAUDE.md

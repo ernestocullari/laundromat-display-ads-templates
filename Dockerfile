@@ -1,4 +1,5 @@
 FROM nginx:alpine
 COPY . /usr/share/nginx/html/
+RUN echo 'server { listen 8080; root /usr/share/nginx/html; index preview-a.html; location / { try_files $uri $uri/ =404; } }' > /etc/nginx/conf.d/default.conf
 EXPOSE 8080
-RUN sed -i 's/listen\s*80;/listen 8080;/' /etc/nginx/conf.d/default.conf
+CMD ["nginx", "-g", "daemon off;"]

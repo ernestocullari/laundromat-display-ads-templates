@@ -3,39 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="ad.size" content="width=300,height=250">
-    <title>Laundromat Display Ad - B 300x250</title>
+    <title>Alamo Laundry Display Ad - B 300x250</title>
     <script type="text/javascript">
         var clickTag = "{{clickMacro}}";
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- {{FONT_FAMILY}}: Change href below and update font-family in CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Barlow Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { width: 300px; height: 250px; overflow: hidden; }
-        .ad-container { width: 300px; height: 250px; background: linear-gradient(135deg, #1A5B8A /* {{PRIMARY_DARK}} */ 0%, #2980B9 /* {{PRIMARY_LIGHT}} */ 50%, #1A5B8A /* {{PRIMARY_DARK}} */ 100%); position: relative; overflow: hidden; cursor: pointer; font-family: 'Inter', sans-serif; }
-        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; animation: phase1 3s ease-in-out forwards; }
-        @keyframes phase1 { 0% { opacity: 0; transform: scale(0.95); } 10% { opacity: 1; transform: scale(1); } 80% { opacity: 1; } 100% { opacity: 0; } }
+        .ad-container { width: 300px; height: 250px; background: linear-gradient(135deg, #1B4D6E 0%, #2E6B9E 50%, #1B4D6E 100%); position: relative; overflow: hidden; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; }
+        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; animation: phase1 4s ease-in-out forwards; }
+        @keyframes phase1 { 0% { opacity: 0; transform: scale(0.95); } 8% { opacity: 1; transform: scale(1); } 85% { opacity: 1; } 100% { opacity: 0; } }
         .phase1-name { display: flex; flex-direction: column; align-items: center; line-height: 0.9; }
-        .phase1-line1 { font-size: 52px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; }
-        .phase1-line2 { font-size: 42px; font-weight: 800; color: #F39C12 /* {{ACCENT}} */; text-transform: uppercase; letter-spacing: -0.02em; }
+        .phase1-line1 { font-size: 38px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; }
+        .phase1-line2 { font-size: 26px; font-weight: 800; color: #5DADE2; text-transform: uppercase; letter-spacing: -0.02em; }
         .phase1-address { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); margin-top: 10px; }
         .persistent-brand { position: absolute; top: 8px; left: 0; width: 100%; text-align: center; font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
-        .phase2 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 24px 20px 18px; opacity: 0; animation: phase2 12s ease-out 3s forwards; }
+        .phase2 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 6px; padding: 25px 20px 25px; opacity: 0; animation: phase2 11s ease-out 4s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
-        .brand-name { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 3.2s forwards; white-space: nowrap; }
+        .brand-name { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
         @keyframes fadeIn { to { opacity: 1; } }
-        .logo { width: 44px; height: 44px; object-fit: contain; opacity: 0; animation: fadeIn 0.4s ease-out 3.3s forwards; }
-        .badge { display: inline-block; background: #F39C12 /* {{ACCENT}} */; color: #1A1A2E /* {{CTA_TEXT_COLOR}} */; padding: 3px 10px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 2px; opacity: 0; animation: fadeIn 0.4s ease-out 3.4s forwards; }
-        .headline-group { opacity: 0; animation: fadeIn 0.4s ease-out 3.5s forwards; text-align: center; }
+        .logo { filter: brightness(0) invert(1) sepia(1) saturate(50) hue-rotate(2deg) brightness(0.95); width: 140px; height: auto; object-fit: contain; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
+        .badge { display: inline-block; background: #5DADE2; color: #FFFFFF; padding: 3px 10px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 2px; opacity: 0; animation: fadeIn 0.4s ease-out 4.4s forwards; }
+        .headline-group { opacity: 0; animation: fadeIn 0.4s ease-out 4.5s forwards; text-align: center; margin: auto 0; }
         .headline-line { font-size: 26px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.02em; }
         .headline-white { color: #FFFFFF; }
-        .headline-accent { color: #F39C12 /* {{ACCENT}} */; }
-        .offer-text { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.85); text-align: center; line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 3.6s forwards; }
-        .cta-button { background: #F39C12 /* {{ACCENT}} */; color: #1A1A2E /* {{CTA_TEXT_COLOR}} */; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 9px 20px; border: none; border-radius: 4px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 3.8s forwards, pulse 2s ease-in-out 5s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(243,156,18, /* {{ACCENT_RGBA}} */ 0.6); } 50% { box-shadow: 0 0 0 8px rgba(243,156,18, /* {{ACCENT_RGBA}} */ 0); } 100% { box-shadow: 0 0 0 0 rgba(243,156,18, /* {{ACCENT_RGBA}} */ 0.6); } }
-        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #F39C12 /* {{ACCENT}} */, #B5DFF5 /* {{ACCENT_HIGHLIGHT}} */); transform: scaleX(0); animation: growLine 0.5s ease-out 4s forwards; }
+        .headline-accent { color: #5DADE2; }
+        .offer-text { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.85); text-align: center; line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 4.6s forwards; }
+        .cta-button { background: #5DADE2; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 9px 20px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 4.8s forwards, pulse 2s ease-in-out 6s infinite; margin-top: auto; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(93,173,226, 0.6); } 50% { box-shadow: 0 0 0 8px rgba(93,173,226, 0); } 100% { box-shadow: 0 0 0 0 rgba(93,173,226, 0.6); } }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #5DADE2, #48C9B0); transform: scaleX(0); animation: growLine 0.5s ease-out 5s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
         .suds { position: absolute; bottom: 3px; left: 0; width: 100%; height: 80px; z-index: 1; pointer-events: none; overflow: visible; }
         .suds-foam { position: absolute; bottom: 0; left: -3%; width: 106%; height: 28px; background: rgba(255,255,255,0.15); border-radius: 60% 60% 0 0 / 100% 100% 0 0; animation: foamWave 4s ease-in-out infinite alternate; }
@@ -43,14 +43,15 @@
         .suds-pop { position: absolute; bottom: 16px; border-radius: 50%; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.35); animation: sudsPop ease-out infinite; }
         @keyframes foamWave { 0% { transform: translateX(-2%); } 100% { transform: translateX(2%); } }
         @keyframes sudsPop { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 0.8; transform: translateY(-50px) scale(0.7); } 100% { opacity: 0; transform: translateY(-70px) scale(0.3); } }
+        .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .address, .divider { display: none !important; }
     </style>
 </head>
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
-        <div class="persistent-brand">YOUR NAME HERE</div>
+        <div class="persistent-brand">ALAMO LAUNDRY</div>
         <div class="phase1">
-            <div class="phase1-name"><span class="phase1-line1">YOUR NAME</span><span class="phase1-line2" data-i18n="phase1.laundry">HERE</span></div>
-            <div class="phase1-address" data-i18n="phase1.address">123 Main St, Your City, ST</div>
+            <div class="phase1-name"><span class="phase1-line1">ALAMO</span><span class="phase1-line2" data-i18n="phase1.laundry">LAUNDRY</span></div>
+            <div class="phase1-address" data-i18n="phase1.address">624 W Alamo St, Brenham, TX</div>
         </div>
         <div class="phase2">
             <img src="media/logo.png" alt="Logo" class="logo">
@@ -59,7 +60,7 @@
                 <div class="headline-line headline-white" data-i18n="headline.see">DROP OFF</div>
                 <div class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</div>
             </div>
-            <p class="offer-text" data-i18n="offer.text">Same-Day Service &bull; Hablamos Espa&#241;ol</p>
+            <p class="offer-text" data-i18n="offer.text">From $1/lb &bull; 24/7 Lockers</p>
             <button class="cta-button" data-i18n="cta.visit">TRY IT TODAY &#8594;</button>
         </div>
         <div class="suds">
@@ -75,33 +76,33 @@
     <script type="text/javascript">
         var translations = {
             en: {
-                'phase1.laundry': 'HERE',
-                'phase1.address': '123 Main St, Your City, ST',
-                'phase1.text': "Drop it off dirty, pick it up fresh \u2014 we do the washing for you",
+                'phase1.laundry': 'LAUNDRY',
+                'phase1.address': '624 W Alamo St, Brenham, TX',
+                'phase1.text': 'Drop it off dirty, pick it up fresh',
                 'phase1.tagline': 'Try Wash-Dry-Fold.',
-                'brand.name': 'Your Laundromat Name',
+                'brand.name': 'Alamo Laundry',
                 'badge.stars': 'Wash-Dry-Fold',
                 'headline.see': 'DROP OFF',
                 'headline.difference': 'PICK UP FRESH',
-                'offer.text': 'Same-Day Service \u2022 Hablamos Espa\u00f1ol',
+                'offer.text': 'From $1/lb \u2022 24/7 Lockers',
                 'cta.visit': 'TRY IT TODAY \u2192'
             },
             es: {
-                'phase1.laundry': 'AQUÍ',
-                'phase1.address': '123 Main St, Your City, ST',
-                'phase1.text': 'D\u00e9jala sucia, rec\u00f3gela limpia \u2014 nosotros lavamos por ti',
+                'phase1.laundry': 'LAVANDER\u00cdA',
+                'phase1.address': '624 W Alamo St, Brenham, TX',
+                'phase1.text': 'D\u00e9jala sucia, rec\u00f3gela limpia',
                 'phase1.tagline': 'Prueba Lavar-Secar-Doblar.',
-                'brand.name': 'Your Laundromat Name',
+                'brand.name': 'Alamo Laundry',
                 'badge.stars': 'Lavar-Secar-Doblar',
                 'headline.see': 'D\u00c9JALA',
                 'headline.difference': 'REC\u00d3GELA LIMPIA',
-                'offer.text': 'Servicio el Mismo D\u00eda \u2022 Hablamos Espa\u00f1ol',
+                'offer.text': 'Desde $1/lb \u2022 Casilleros 24/7',
                 'cta.visit': 'PRU\u00c9BALO HOY \u2192'
             }
         };
 
         function detectLanguage() {
-            var stored = localStorage.getItem('laundromat-lang');
+            var stored = localStorage.getItem('alamo-lang');
             if (stored && (stored === 'en' || stored === 'es')) {
                 return stored;
             }
@@ -116,7 +117,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            localStorage.setItem('laundromat-lang', lang);
+            localStorage.setItem('alamo-lang', lang);
         }
 
         setLanguage(detectLanguage());

@@ -2,33 +2,33 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Laundromat Display Ads - Templates (A: Brand Awareness)</title>
+    <title>Alamo Laundry Display Ads (A: Brand Awareness)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #0f0f1a; font-family: 'Inter', sans-serif; padding: 40px 20px; min-height: 100vh; }
+        body { background: #0f0f1a; font-family: 'Barlow Condensed', sans-serif; padding: 40px 20px; min-height: 100vh; }
         h1 { color: #FFFFFF; text-align: center; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
         .subtitle { color: rgba(255,255,255,0.4); text-align: center; font-size: 14px; margin-bottom: 40px; }
         .ad-section { margin-bottom: 48px; display: flex; flex-direction: column; align-items: center; }
         .ad-label { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
-        .ad-label span { color: #F39C12; }
+        .ad-label span { color: #5DADE2; }
         iframe { border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; display: block; }
         .row { display: flex; gap: 40px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-bottom: 48px; }
         .controls { text-align: center; margin-bottom: 32px; display: flex; gap: 12px; justify-content: center; }
-        .controls button { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); padding: 8px 20px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .controls button { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); padding: 8px 20px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
         .controls button:hover { background: rgba(255,255,255,0.15); }
-        .controls button.active { background: #F39C12; color: #1A1A2E; border-color: #F39C12; }
+        .controls button.active { background: #5DADE2; color: #FFFFFF; border-color: #5DADE2; }
         hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0 auto 48px; max-width: 800px; }
     </style>
 </head>
 <body>
-    <h1>Laundromat Display Ads &mdash; Templates</h1>
+    <h1>Alamo Laundry &mdash; Display Ads</h1>
     <p class="subtitle">DSP-Ready Preview &mdash; A: Brand Awareness &mdash; All 12 IAB Sizes</p>
 
     <div class="controls">
-        <a href="preview-b.html" style="background: rgba(255,255,255,0.08); color: #F39C12; border: 1px solid #F39C12; padding: 8px 20px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s;">View B: Service-Focused &rarr;</a>
+        <a href="preview-b.html" style="background: rgba(255,255,255,0.08); color: #5DADE2; border: 1px solid #5DADE2; padding: 8px 20px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s;">View B: Service-Focused &rarr;</a>
     </div>
 
     <div class="controls">
@@ -110,7 +110,7 @@
             var iframes = document.querySelectorAll('iframe');
             iframes.forEach(function(iframe) {
                 try {
-                    iframe.contentWindow.localStorage.setItem('laundromat-lang', lang);
+                    iframe.contentWindow.localStorage.setItem('alamo-lang', lang);
                     iframe.contentWindow.setLanguage(lang);
                 } catch(e) {}
             });
