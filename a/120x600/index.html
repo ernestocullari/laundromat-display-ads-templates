@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="ad.size" content="width=300,height=600">
-    <title>Wash Works Display Ad - A 300x600</title>
+    <meta name="ad.size" content="width=120,height=600">
+    <title>Wash Works Display Ad - A 120x600</title>
     <script type="text/javascript">
         var clickTag = "{{clickMacro}}";
     </script>
@@ -12,40 +12,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 300px; height: 600px; overflow: hidden; }
-        .ad-container { width: 300px; height: 600px; background: #42B6ED; position: relative; overflow: hidden; cursor: pointer; font-family: 'Roboto', sans-serif; }
-        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 30px 12px; text-align: center; animation: phase1 4s ease-in-out forwards; }
+        html, body { width: 120px; height: 600px; overflow: hidden; }
+        .ad-container { width: 120px; height: 600px; background: #42B6ED; position: relative; overflow: hidden; cursor: pointer; font-family: 'Roboto', sans-serif; }
+        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 20px 6px; text-align: center; animation: phase1 4s ease-in-out forwards; }
         @keyframes phase1 { 0% { opacity: 0; transform: scale(0.95); } 8% { opacity: 1; transform: scale(1); } 85% { opacity: 1; } 100% { opacity: 0; } }
         .phase1-name { display: flex; flex-direction: column; align-items: center; line-height: 0.85; }
-        .phase1-word { font-size: 80px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.03em; }
-        .phase1-word-accent { font-size: 34px; font-weight: 800; color: #FFAB23; text-transform: uppercase; letter-spacing: -0.03em; margin-top: 4px; }
-        .phase1.address { margin-top: auto; font-size: 14px; font-weight: 600; color: #192226; margin-top: 20px; }
-        .persistent-brand { position: absolute; top: 10px; left: 0; width: 100%; text-align: center; font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
+        .phase1-word { font-size: 32px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.03em; }
+        .phase1-word-accent { font-size: 14px; font-weight: 800; color: #FFAB23; text-transform: uppercase; letter-spacing: -0.03em; margin-top: 4px; }
+        .phase1.address { margin-top: auto; font-size: 9px; font-weight: 600; color: #192226; margin-top: 16px; line-height: 1.4; }
+        .persistent-brand { position: absolute; top: 8px; left: 0; width: 100%; text-align: center; font-size: 7px; font-weight: 800; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
         .phase2 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 24px; padding: 25px 12px 50px; opacity: 0; background: #FFFFFF; animation: phase2 11s ease-out 4s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
-        .brand-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.15em; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
+        .brand-name { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
         @keyframes fadeIn { to { opacity: 1; } }
-        .badge { display: inline-block; background: #FFAB23; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 2px; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
-        .headline-top { margin-bottom: -18px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.4s forwards; }
-        .headline-top .headline-line { font-size: 48px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
+        .headline-top { margin-bottom: -18px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.3s forwards; }
+        .headline-top .headline-line { font-size: 20px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .headline-white { color: #2C5A9E; }
         .headline-accent { color: #FFAB23; }
-        .logo-section { order: -1; margin-bottom: 50px; opacity: 0; animation: fadeIn 0.5s ease-out 4.6s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
-        .logo { width: 160px; height: auto; object-fit: contain; }
-        .sparkle { position: absolute; top: -6px; right: -12px; font-size: 18px; color: #FFAB23; animation: sparkleRotate 3s ease-in-out 5.5s infinite; }
-        @keyframes sparkleRotate { 0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; } 50% { transform: rotate(180deg) scale(1.2); opacity: 0.7; } }
-        .headline-bottom { text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.8s forwards; }
-        .headline-bottom .headline-line { font-size: 48px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
-        .offer-row { display: flex; align-items: center; justify-content: center; gap: 20px; opacity: 0; animation: fadeIn 0.5s ease-out 5s forwards; }
+        .logo-section { order: -1; margin-bottom: 50px; opacity: 0; animation: fadeIn 0.5s ease-out 4.5s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
+        .logo { width: 90px; height: auto; object-fit: contain; }
+        .headline-bottom { text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.7s forwards; }
+        .headline-bottom .headline-line { font-size: 16px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
+        .offer-column { display: flex; flex-direction: column; align-items: center; gap: 16px; opacity: 0; animation: fadeIn 0.5s ease-out 4.9s forwards; }
         .offer-item { text-align: center; }
-        .offer-value { font-size: 26px; font-weight: 800; color: #FFFFFF; line-height: 1; }
+        .offer-value { font-size: 20px; font-weight: 800; color: #FFFFFF; line-height: 1; }
         .offer-value.accent { color: #FFAB23; }
-        .offer-label { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
-        .divider { width: 1px; height: 36px; background: rgba(255,171,35,0.3); }
-        .cta-button { order: 2; width: 100%; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 16px 24px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.5s ease-out 5.2s forwards, pulse 2s ease-in-out 6.5s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
-        .address { margin-top: auto; font-size: 18px; font-weight: 600; color: #192226; text-align: center; margin-top: 8px; opacity: 0; animation: fadeIn 0.4s ease-out 5.2s forwards; }
-        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.6s ease-out 5.4s forwards; }
+        .offer-label { font-size: 8px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 3px; }
+        .address { margin-top: auto; font-size: 12px; font-weight: 600; color: #192226; text-align: center; opacity: 0; animation: fadeIn 0.4s ease-out 5.1s forwards; }
+        .cta-button { order: 2; width: 100%; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 9px 6px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.5s ease-out 5.1s forwards, pulse 2s ease-in-out 6.5s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 6px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.6s ease-out 5.3s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
 
         .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
@@ -57,13 +53,11 @@
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
         <div class="bubbles">
-            <div class="bubble" style="width:35px;height:35px;left:8%;animation-duration:7s;animation-delay:0s;"></div>
-            <div class="bubble" style="width:22px;height:22px;left:25%;animation-duration:5.5s;animation-delay:1.5s;"></div>
-            <div class="bubble" style="width:50px;height:50px;left:42%;animation-duration:8.5s;animation-delay:0.5s;"></div>
-            <div class="bubble" style="width:28px;height:28px;left:60%;animation-duration:6s;animation-delay:2.2s;"></div>
-            <div class="bubble" style="width:55px;height:55px;left:75%;animation-duration:9s;animation-delay:0.8s;"></div>
-            <div class="bubble" style="width:20px;height:20px;left:88%;animation-duration:5s;animation-delay:3s;"></div>
-            <div class="bubble" style="width:40px;height:40px;left:35%;animation-duration:7.5s;animation-delay:2.5s;"></div>
+            <div class="bubble" style="width:22px;height:22px;left:5%;animation-duration:7s;animation-delay:0s;"></div>
+            <div class="bubble" style="width:14px;height:14px;left:25%;animation-duration:5.5s;animation-delay:1.2s;"></div>
+            <div class="bubble" style="width:35px;height:35px;left:40%;animation-duration:8s;animation-delay:0.5s;"></div>
+            <div class="bubble" style="width:18px;height:18px;left:65%;animation-duration:6s;animation-delay:2s;"></div>
+            <div class="bubble" style="width:28px;height:28px;left:30%;animation-duration:9s;animation-delay:1s;"></div>
         </div>
         <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
         <div class="phase1">
@@ -75,30 +69,27 @@
             <div class="phase1-address" data-i18n="phase1.address">Springfield &amp; Westfield, MA</div>
         </div>
         <div class="phase2">
-            <div class="badge" data-i18n="badge.stars">Fully Attended</div>
             <div class="headline-top">
                 <div class="headline-line headline-white" data-i18n="headline.see">NEWLY</div>
             </div>
             <div class="logo-section">
                 <img src="media/logo.png" alt="Logo" class="logo">
-                <span class="sparkle">&#10022;</span>
             </div>
             <div class="headline-bottom">
                 <div class="headline-line headline-accent" data-i18n="headline.difference">RENOVATED</div>
             </div>
-            <div class="offer-row">
+            <div class="offer-column">
                 <div class="offer-item">
                     <div class="offer-value" data-i18n="offer.days">OPEN 7 DAYS</div>
                     <div class="offer-label" data-i18n="offer.hours">6 AM &#8211; 10 PM</div>
                 </div>
-                <div class="divider"></div>
                 <div class="offer-item">
                     <div class="offer-value accent" data-i18n="offer.stars">Fully Attended</div>
                     <div class="offer-label" data-i18n="offer.reviews">Every Day</div>
                 </div>
             </div>
-            <button class="cta-button" data-i18n="cta.visit">FIND A LOCATION &#8594;</button>
             <div class="address">Springfield, MA<br>Westfield, MA</div>
+            <button class="cta-button" data-i18n="cta.visit">FIND A LOCATION &#8594;</button>
         </div>
         <div class="bottom-accent"></div>
     </div>
@@ -108,7 +99,7 @@
                 'phase1.laundry': 'LAUNDROMATS',
                 'phase1.address': 'Springfield & Westfield, MA',
                 'brand.name': 'Wash Works',
-                'badge.stars': 'Fully Attended',
+                
                 'headline.see': 'NEWLY',
                 'headline.difference': 'RENOVATED',
                 'offer.days': 'OPEN 7 DAYS',
@@ -122,7 +113,7 @@
                 'phase1.laundry': 'LAVANDERÍAS',
                 'phase1.address': 'Springfield y Westfield, MA',
                 'brand.name': 'Wash Works',
-                'badge.stars': 'Totalmente Atendida',
+                
                 'headline.see': 'RECIÉN',
                 'headline.difference': 'RENOVADA',
                 'offer.days': 'ABIERTO 7 D\u00cdAS',

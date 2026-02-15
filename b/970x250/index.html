@@ -3,67 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="ad.size" content="width=970,height=250">
-    <title>Laundromat Display Ad - B 970x250</title>
+    <title>Wash Works Display Ad - B 970x250</title>
     <script type="text/javascript">
         var clickTag = "{{clickMacro}}";
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- {{FONT_FAMILY}}: Change href below and update font-family in CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { width: 970px; height: 250px; overflow: hidden; }
-        .ad-container { width: 970px; height: 250px; background: linear-gradient(135deg, #1A5B8A /* {{PRIMARY_DARK}} */ 0%, #2980B9 /* {{PRIMARY_LIGHT}} */ 50%, #1A5B8A /* {{PRIMARY_DARK}} */ 100%); position: relative; overflow: hidden; cursor: pointer; font-family: 'Inter', sans-serif; }
+        .ad-container { width: 970px; height: 250px; background: #42B6ED; position: relative; overflow: hidden; cursor: pointer; font-family: 'Roboto', sans-serif; }
 
         /* Phase 1 */
-        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; text-align: center; animation: phase1 3s ease-in-out forwards; }
-        @keyframes phase1 { 0% { opacity: 0; transform: scale(0.95); } 10% { opacity: 1; transform: scale(1); } 80% { opacity: 1; } 100% { opacity: 0; } }
-        .phase1-name { font-size: 76px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
-        .phase1-address { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.6); margin-top: 12px; }
+        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; text-align: center; animation: phase1 4s ease-in-out forwards; }
+        @keyframes phase1 { 0% { opacity: 0; transform: scale(0.95); } 8% { opacity: 1; transform: scale(1); } 85% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-name { display: flex; flex-direction: column; align-items: center; line-height: 0.9; }
+        .phase1-line1 { font-size: 72px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; }
+        .phase1-line2 { font-size: 46px; font-weight: 800; color: #FFAB23; text-transform: uppercase; letter-spacing: -0.02em; }
+        .phase1-address { font-size: 16px; font-weight: 600; color: #192226; margin-top: 12px; }
 
         .persistent-brand { position: absolute; top: 8px; left: 0; width: 100%; text-align: center; font-size: 11px; font-weight: 800; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
 
         /* Phase 2 */
-        .phase2 { position: absolute; inset: 0; display: flex; align-items: center; gap: 20px; padding: 24px 24px; opacity: 0; animation: phase2 12s ease-out 3s forwards; }
+        .phase2 { position: absolute; inset: 0; display: flex; align-items: center; gap: 20px; padding: 24px 24px; opacity: 0; background: #FFFFFF; animation: phase2 11s ease-out 4s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
 
         @keyframes fadeIn { to { opacity: 1; } }
 
         /* Left Group */
         .left-group { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; gap: 6px; }
-        .logo { width: 60px; height: 60px; object-fit: contain; opacity: 0; animation: fadeIn 0.4s ease-out 3.2s forwards; }
-        .brand-name { font-size: 18px; font-weight: 800; color: #FFFFFF; white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 3.2s forwards; }
-        .stars-row { display: flex; align-items: center; gap: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 3.3s forwards; }
-        .stars { font-size: 14px; color: #F39C12 /* {{ACCENT}} */; letter-spacing: 1px; }
+        .logo { width: 60px; height: 60px; object-fit: contain; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; }
+        .brand-name { font-size: 18px; font-weight: 800; color: #FFFFFF; white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; }
+        .stars-row { display: flex; align-items: center; gap: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
+        .stars { font-size: 14px; color: #FFAB23; letter-spacing: 1px; }
         .stars-text { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); white-space: nowrap; }
 
         /* Divider */
-        .divider { width: 1px; height: 160px; background: rgba(255,255,255,0.15); flex-shrink: 0; opacity: 0; animation: fadeIn 0.4s ease-out 3.3s forwards; }
+        .divider { width: 1px; height: 160px; background: rgba(255,255,255,0.15); flex-shrink: 0; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
 
         /* Center */
         .center { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-        .headline-group { opacity: 0; animation: fadeIn 0.4s ease-out 3.4s forwards; }
+        .headline-group { opacity: 0; animation: fadeIn 0.4s ease-out 4.4s forwards; }
         .headline-line { font-size: 26px; font-weight: 800; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
-        .headline-white { color: #FFFFFF; }
-        .headline-accent { color: #F39C12 /* {{ACCENT}} */; }
-        .sub-headline { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 3.5s forwards; }
+        .headline-white { color: #2C5A9E; }
+        .headline-accent { color: #FFAB23; }
+        .sub-headline { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 4.5s forwards; }
         .props-row { display: flex; align-items: center; gap: 18px; margin-top: 4px; }
         .prop { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.92); white-space: nowrap; }
         .prop svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.9); flex-shrink: 0; }
-        .prop-1 { opacity: 0; animation: fadeIn 0.4s ease-out 3.6s forwards; }
-        .prop-2 { opacity: 0; animation: fadeIn 0.4s ease-out 3.7s forwards; }
-        .prop-3 { opacity: 0; animation: fadeIn 0.4s ease-out 3.8s forwards; }
+        .prop-1 { opacity: 0; animation: fadeIn 0.4s ease-out 4.6s forwards; }
+        .prop-2 { opacity: 0; animation: fadeIn 0.4s ease-out 4.7s forwards; }
+        .prop-3 { opacity: 0; animation: fadeIn 0.4s ease-out 4.8s forwards; }
 
         /* Right Group */
         .right-group { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; gap: 10px; }
-        .tagline { font-size: 14px; font-weight: 600; font-style: italic; color: rgba(255,255,255,0.5); white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 3.9s forwards; }
-        .cta-button { background: #F39C12 /* {{ACCENT}} */; color: #1A1A2E /* {{CTA_TEXT_COLOR}} */; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 20px; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 4.0s forwards, pulse 2s ease-in-out 5.5s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(243,156,18, /* {{ACCENT_RGBA}} */ 0.6); } 50% { box-shadow: 0 0 0 8px rgba(243,156,18, /* {{ACCENT_RGBA}} */ 0); } 100% { box-shadow: 0 0 0 0 rgba(243,156,18, /* {{ACCENT_RGBA}} */ 0.6); } }
-        .address { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; }
+        .tagline { font-size: 14px; font-weight: 600; font-style: italic; color: rgba(255,255,255,0.5); white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 4.9s forwards; }
+        .cta-button { background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 20px; border: none; border-radius: 6px; cursor: pointer; white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 5.0s forwards, pulse 2s ease-in-out 6.5s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
+        .address { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); white-space: nowrap; opacity: 0; animation: fadeIn 0.4s ease-out 5.2s forwards; }
 
         /* Bottom Accent */
-        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #F39C12 /* {{ACCENT}} */, #B5DFF5 /* {{ACCENT_HIGHLIGHT}} */); transform: scaleX(0); animation: growLine 0.5s ease-out 4.4s forwards; }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.5s ease-out 5.4s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
 
         .suds { position: absolute; bottom: 3px; left: 0; width: 100%; height: 80px; z-index: 1; pointer-events: none; overflow: visible; }
@@ -72,21 +73,22 @@
         .suds-pop { position: absolute; bottom: 16px; border-radius: 50%; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.35); animation: sudsPop ease-out infinite; }
         @keyframes foamWave { 0% { transform: translateX(-1%); } 100% { transform: translateX(1%); } }
         @keyframes sudsPop { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 0.8; transform: translateY(-50px) scale(0.7); } 100% { opacity: 0; transform: translateY(-70px) scale(0.3); } }
+            .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .address, .divider { display: none !important; }
     </style>
 </head>
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
-        <div class="persistent-brand">YOUR NAME HERE</div>
+        <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
         <div class="phase1">
-            <div class="phase1-name">YOUR NAME <span data-i18n="phase1.laundry">HERE</span></div>
-            <div class="phase1-address" data-i18n="phase1.address">123 Main St, Your City, ST</div>
+            <div class="phase1-name"><span class="phase1-line1">WASH WORKS</span><span class="phase1-line2" data-i18n="phase1.laundry">LAUNDROMATS</span></div>
+            <div class="phase1-address" data-i18n="phase1.address">Springfield & Westfield, MA</div>
         </div>
         <div class="phase2">
             <div class="left-group">
                 <img src="media/logo.png" alt="Logo" class="logo">
                 <div class="stars-row">
                     <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    <span class="stars-text" data-i18n="stars.text">5.0 &#183; XX Reviews</span>
+                    <span class="stars-text" data-i18n="badge.attended">Wash & Fold</span>
                 </div>
             </div>
             <div class="divider"></div>
@@ -98,7 +100,7 @@
                 <div class="props-row">
                     <div class="prop prop-1">
                         <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                        <span data-i18n="prop.attended">Wash-Dry-Fold Service</span>
+                        <span data-i18n="prop.attended">From $0.99/lb</span>
                     </div>
                     <div class="prop prop-2">
                         <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>
@@ -111,9 +113,9 @@
                 </div>
             </div>
             <div class="right-group">
-                <div class="tagline" data-i18n="tagline">Try Wash-Dry-Fold</div>
-                <button class="cta-button" data-i18n="cta.directions">GET DIRECTIONS &#8594;</button>
-                <div class="address" data-i18n="address">123 Main St, Your City, ST</div>
+                <div class="tagline" data-i18n="offer.text">From $0.99/lb &#8226; Ready in 24 Hrs</div>
+                <button class="cta-button" data-i18n="cta.action">TRY IT TODAY &#8594;</button>
+                <div class="address" data-i18n="address">Springfield & Westfield, MA</div>
             </div>
         </div>
         <div class="suds">
@@ -131,43 +133,43 @@
     <script type="text/javascript">
         var translations = {
             en: {
-                'phase1.text': "Drop it off dirty, pick it up fresh \u2014 we do the washing for you",
-                'phase1.tagline': 'Try Wash-Dry-Fold.',
-                'brand.name': 'Your Laundromat Name',
+                'phase1.text': 'Drop it off dirty, pick it up fresh \u2014 we do the washing for you',
+                'phase1.tagline': 'Try Wash & Fold.',
+                'brand.name': 'Wash Works',
                 'headline.see': 'DROP OFF',
                 'headline.difference': 'PICK UP FRESH',
                 'subhead': 'Drop off your clothes, pick them up fresh and folded',
-                'prop.attended': 'Wash-Dry-Fold Service',
+                'prop.attended': 'From $0.99/lb',
                 'prop.renovated': 'Same-Day Available',
                 'prop.bilingual': 'Hablamos Espa\u00f1ol',
-                'stars.text': '5.0 \u00b7 XX Reviews',
-                'tagline': 'Try Wash-Dry-Fold',
-                'cta.directions': 'GET DIRECTIONS \u2192',
-                'address': '123 Main St, Your City, ST',
-                'phase1.laundry': 'HERE',
-                'phase1.address': '123 Main St, Your City, ST'
+                'badge.attended': 'Wash & Fold',
+                'offer.text': 'From $0.99/lb \u2022 Ready in 24 Hrs',
+                'cta.action': 'TRY IT TODAY \u2192',
+                'address': 'Springfield & Westfield, MA',
+                'phase1.laundry': 'LAUNDROMATS',
+                'phase1.address': 'Springfield & Westfield, MA'
             },
             es: {
                 'phase1.text': 'D\u00e9jala sucia, rec\u00f3gela limpia \u2014 nosotros lavamos por ti',
-                'phase1.tagline': 'Prueba Lavar-Secar-Doblar.',
-                'brand.name': 'Your Laundromat Name',
-                'headline.see': 'D\u00c9JALA',
-                'headline.difference': 'REC\u00d3GELA LIMPIA',
-                'subhead': 'Deja tu ropa por la ma\u00f1ana, rec\u00f3gela doblada despu\u00e9s del trabajo',
-                'prop.attended': 'Servicio Lavar-Secar-Doblar',
-                'prop.renovated': 'Disponible el Mismo D\u00eda',
+                'phase1.tagline': 'Pruebe Lavado y Doblado.',
+                'brand.name': 'Wash Works',
+                'headline.see': 'DEJE SU ROPA',
+                'headline.difference': 'REC\u00d3JALA FRESCA',
+                'subhead': 'Deje su ropa, rec\u00f3jala fresca y doblada',
+                'prop.attended': 'Desde $0.99/lb',
+                'prop.renovated': 'Mismo D\u00eda Disponible',
                 'prop.bilingual': 'Hablamos Espa\u00f1ol',
-                'stars.text': '5.0 \u00b7 XX Rese\u00f1as',
-                'tagline': 'Prueba Lavar-Secar-Doblar',
-                'cta.directions': 'C\u00d3MO LLEGAR \u2192',
-                'address': '123 Main St, Your City, ST',
-                'phase1.laundry': 'AQUÍ',
-                'phase1.address': '123 Main St, Your City, ST'
+                'badge.attended': 'Lavado y Doblado',
+                'offer.text': 'Desde $0.99/lb \u2022 Lista en 24 Hrs',
+                'cta.action': 'PRU\u00c9BELO HOY \u2192',
+                'address': 'Springfield y Westfield, MA',
+                'phase1.laundry': 'LAVANDERÍAS',
+                'phase1.address': 'Springfield y Westfield, MA'
             }
         };
 
         function detectLanguage() {
-            var stored = localStorage.getItem('laundromat-lang');
+            var stored = localStorage.getItem('washworks-lang');
             if (stored && (stored === 'en' || stored === 'es')) {
                 return stored;
             }
@@ -182,7 +184,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            localStorage.setItem('laundromat-lang', lang);
+            localStorage.setItem('washworks-lang', lang);
         }
 
         setLanguage(detectLanguage());
@@ -201,7 +203,7 @@
                 window.open(clickTag, "_blank");
             });
         }
-        setInterval(restartAnimations, 15000);
+        
     </script>
 </body>
 </html>
