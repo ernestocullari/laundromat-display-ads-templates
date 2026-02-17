@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=320,height=50">
+    <title>Wash Works Display Ad - B 320x50</title>
+    <script type="text/javascript">
+        var clickTag = "{{clickMacro}}";
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 320px; height: 50px; overflow: hidden; }
+        .ad-container { width: 320px; height: 50px; background: #42B6ED; position: relative; overflow: hidden; cursor: pointer; font-family: 'Roboto', sans-serif; }
+        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 10px; animation: phase1 4s ease-in-out forwards; }
+        @keyframes phase1 { 0% { opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-name { font-size: 14px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
+        .phase1-accent { color: #FFAB23; }
+        .phase1-address { font-size: 8px; font-weight: 600; color: rgba(255,255,255,0.5); margin-top: 2px; white-space: nowrap; }
+        .persistent-brand { position: absolute; bottom: 3px; left: 0; width: 100%; text-align: center; font-size: 7px; font-weight: 800; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
+        .phase1-5 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; animation: phase1-5 3s ease-in-out 4s forwards; }
+        @keyframes phase1-5 { 0% { opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-5 .headline-text { font-size: 14px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; line-height: 1; }
+        .phase2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 24px; padding: 0 10px; opacity: 0; background: #FFFFFF; animation: phase2 8s ease-out 7s forwards; }
+        @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
+        .left-group { display: flex; align-items: center; gap: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 7.2s forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .logo { width: 70px; height: auto; object-fit: contain; flex-shrink: 0; }
+        .headline-stack { display: flex; flex-direction: column; line-height: 0.9; }
+        .headline-stack .headline-white { font-size: 15px; font-weight: 800; color: #2C5A9E; text-transform: uppercase; }
+        .headline-stack .headline-accent { font-size: 15px; font-weight: 800; color: #FFAB23; text-transform: uppercase; }
+        .center-group { display: flex; align-items: center; gap: 8px; opacity: 0; animation: fadeIn 0.4s ease-out 7.4s forwards; }
+        .offer-item { text-align: center; }
+        .offer-value { font-size: 14px; font-weight: 800; color: #FFFFFF; line-height: 1; }
+        .offer-label { font-size: 7px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 2px; }
+        .cta-button { flex-shrink: 0; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 7.5s forwards, pulse 2s ease-in-out 8s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 6px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.5s ease-out 7.6s forwards; }
+        @keyframes growLine { to { transform: scaleX(1); } }
+        .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+        .bubble { position: absolute; bottom: -10px; background: rgba(255,255,255,0.22); border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); animation: floatUp linear infinite; }
+        @keyframes floatUp { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-70px) translateX(10px); opacity: 0; } }
+            .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .address, .divider, .center-group { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
+        <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
+        <div class="phase1">
+            <div class="phase1-name">WASH WORKS <span class="phase1-accent" data-i18n="phase1.laundry">LAUNDROMATS</span></div>
+            <div class="phase1-address" data-i18n="phase1.address">Springfield & Westfield, MA</div>
+        </div>
+        <div class="phase1-5">
+            <span class="headline-text" data-i18n="phase1-5.text">TRY WASH & FOLD SERVICE</span>
+        </div>
+        <div class="phase2">
+            <div class="left-group">
+                <img src="media/logo.png" alt="Logo" class="logo">
+                <div class="headline-stack">
+                    <span class="headline-white" data-i18n="headline.top">WASH & FOLD</span>
+                    <span class="headline-accent" data-i18n="headline.bottom">ONLY $0.99/LB</span>
+                </div>
+            </div>
+            <div class="center-group">
+                <div class="offer-item">
+                    <div class="offer-value" data-i18n="offer.days">$0.99/LB</div>
+                    <div class="offer-label" data-i18n="offer.hours">24 HRS</div>
+                </div>
+            </div>
+            <button class="cta-button" data-i18n="cta.action">TRY &#8594;</button>
+        </div>
+        <div class="bubbles">
+            <div class="bubble" style="width:15px;height:15px;left:15%;animation-duration:4s;animation-delay:0s;"></div>
+            <div class="bubble" style="width:12px;height:12px;left:45%;animation-duration:4.5s;animation-delay:1.2s;"></div>
+            <div class="bubble" style="width:18px;height:18px;left:75%;animation-duration:3.5s;animation-delay:0.5s;"></div>
+        </div>
+        <div class="bottom-accent"></div>
+    </div>
+    <script type="text/javascript">
+        var translations = {
+            en: {
+                'phase1.headline1': 'WASH & FOLD ONLY $0.99/LB',
+                'phase1.headline2': 'TRY WASH & FOLD SERVICE',
+                'phase1-5.text': 'TRY WASH & FOLD SERVICE',
+                'brand.name': 'Wash Works',
+                'headline.top': 'WASH & FOLD',
+                'headline.bottom': 'ONLY $0.99/LB',
+                'offer.days': '$0.99/LB',
+                'offer.hours': '24 HRS',
+                'cta.action': 'TRY \u2192',
+                'phase1.laundry': 'LAUNDROMATS',
+                'phase1.address': 'Springfield & Westfield, MA'
+            },
+            es: {
+                'phase1.headline1': 'LAVAR Y DOBLAR SOLO $0.99/LB',
+                'phase1.headline2': 'PRUEBA NUESTRO SERVICIO',
+                'phase1-5.text': 'PRUEBA NUESTRO SERVICIO',
+                'brand.name': 'Wash Works',
+                'headline.top': 'LAVAR Y DOBLAR',
+                'headline.bottom': 'SOLO $0.99/LB',
+                'offer.days': '$0.99/LB',
+                'offer.hours': '24 HRS',
+                'cta.action': 'IR \u2192',
+                'phase1.laundry': 'LAVANDERÍAS',
+                'phase1.address': 'Springfield y Westfield, MA'
+            }
+        };
+
+        function detectLanguage() {
+            var stored = localStorage.getItem('washworks-lang');
+            if (stored && (stored === 'en' || stored === 'es')) {
+                return stored;
+            }
+            var browserLang = navigator.language || navigator.userLanguage || 'en';
+            return browserLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+        }
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            localStorage.setItem('washworks-lang', lang);
+        }
+
+        setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
+
+        document.getElementById("ad-container").addEventListener("click", function() {
+            window.open(clickTag, "_blank");
+        });
+
+        function restartAnimations() {
+            var container = document.querySelector(".ad-container");
+            var clone = container.cloneNode(true);
+            clone.id = "ad-container";
+            container.parentNode.replaceChild(clone, container);
+            setLanguage(detectLanguage());
+            clone.addEventListener("click", function() {
+                window.open(clickTag, "_blank");
+            });
+        }
+        
+        setInterval(restartAnimations, 15000);
+    </script>
+</body>
+</html>

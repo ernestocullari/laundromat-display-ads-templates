@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=970,height=90">
+    <title>Wash Works Display Ad - A 970x90</title>
+    <script type="text/javascript">
+        var clickTag = "{{clickMacro}}";
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 970px; height: 90px; overflow: hidden; }
+        .ad-container { width: 970px; height: 90px; background: #42B6ED; position: relative; overflow: hidden; cursor: pointer; font-family: 'Roboto', sans-serif; }
+        .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 20px; animation: phase1 4s ease-in-out forwards; }
+        @keyframes phase1 { 0% { opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-name { font-size: 36px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
+        .phase1-accent { color: #FFAB23; }
+        .phase1-address { font-size: 12px; font-weight: 600; color: #192226; margin-top: 4px; }
+        .phase1-5 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; animation: phase1-5 3s ease-in-out 4s forwards; }
+        @keyframes phase1-5 { 0% { opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
+        .phase1-5 .headline-text { font-size: 36px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; line-height: 1; }
+        .persistent-brand { position: absolute; bottom: 3px; left: 0; width: 100%; text-align: center; font-size: 8px; font-weight: 800; color: rgba(255,255,255,0.25); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
+        .phase2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; opacity: 0; background: #FFFFFF; animation: phase2 8s ease-out 7s forwards; }
+        @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
+        .left-group { display: flex; align-items: center; gap: 12px; opacity: 0; animation: fadeIn 0.5s ease-out 7.2s forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .logo { width: 110px; height: auto; object-fit: contain; flex-shrink: 0; }
+        .headline-stack { display: flex; flex-direction: column; line-height: 0.85; }
+        .headline-stack .headline-white { font-size: 30px; font-weight: 800; color: #2C5A9E; text-transform: uppercase; }
+        .headline-stack .headline-accent { font-size: 30px; font-weight: 800; color: #FFAB23; text-transform: uppercase; }
+        .center-group { display: flex; align-items: center; gap: 26px; opacity: 0; animation: fadeIn 0.5s ease-out 7.4s forwards; }
+        .offer-item { text-align: center; }
+        .offer-value { font-size: 28px; font-weight: 800; color: #FFFFFF; line-height: 1; }
+        .offer-value.accent { color: #FFAB23; }
+        .offer-label { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+        .divider { width: 1px; height: 44px; background: rgba(255,171,35,0.3); }
+        .cta-button { flex-shrink: 0; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 14px 26px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.5s ease-out 7.5s forwards, pulse 2s ease-in-out 8s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.6s ease-out 7.6s forwards; }
+        @keyframes growLine { to { transform: scaleX(1); } }
+        .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+        .bubble { position: absolute; bottom: -20px; background: rgba(255,255,255,0.22); border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); animation: floatUp linear infinite; }
+        @keyframes floatUp { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-120px) translateX(15px); opacity: 0; } }
+            .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .address, .divider { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
+        <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
+        <div class="phase1">
+            <div class="phase1-name">WASH WORKS <span class="phase1-accent" data-i18n="phase1.laundry">LAUNDROMATS</span></div>
+            <div class="phase1-address" data-i18n="phase1.address">Springfield & Westfield, MA</div>
+        </div>
+        <div class="phase1-5">
+            <span class="headline-text" data-i18n="phase1-5.text">BRAND NEW FACILITY</span>
+        </div>
+        <div class="phase2">
+            <div class="left-group">
+                <img src="media/logo.png" alt="Logo" class="logo">
+                <div class="headline-stack">
+                    <div class="headline-white" data-i18n="headline.top">BRAND NEW FACILITY</div>
+                    <div class="headline-accent" data-i18n="headline.bottom">COME VISIT</div>
+                </div>
+            </div>
+            <div class="center-group">
+                <div class="offer-item">
+                    <div class="offer-value" data-i18n="offer.price">$0.99/LB</div>
+                    <div class="offer-label" data-i18n="offer.turnaround">Ready in 24 Hrs</div>
+                </div>
+                <div class="divider"></div>
+                <div class="offer-item">
+                    <div class="offer-value accent" data-i18n="offer.service">80lb Washers</div>
+                    <div class="offer-label" data-i18n="offer.reviews"></div>
+                </div>
+            </div>
+            <button class="cta-button" data-i18n="cta.action">LEARN MORE &#8594;</button>
+        </div>
+        <div class="bubbles">
+            <div class="bubble" style="width:20px;height:20px;left:12%;animation-duration:5s;animation-delay:0s;"></div>
+            <div class="bubble" style="width:25px;height:25px;left:30%;animation-duration:6s;animation-delay:1.5s;"></div>
+            <div class="bubble" style="width:30px;height:30px;left:52%;animation-duration:5.5s;animation-delay:0.8s;"></div>
+            <div class="bubble" style="width:22px;height:22px;left:72%;animation-duration:6.5s;animation-delay:2s;"></div>
+            <div class="bubble" style="width:28px;height:28px;left:90%;animation-duration:5s;animation-delay:3s;"></div>
+        </div>
+        <div class="bottom-accent"></div>
+    </div>
+    <script type="text/javascript">
+        var translations = {
+            en: {
+                'phase1.headline1': 'BRAND NEW FACILITY',
+                'phase1.headline2': 'COME VISIT',
+                'phase1-5.text': 'BRAND NEW FACILITY',
+                'brand.name': 'Wash Works',
+                'headline.top': 'BRAND NEW FACILITY',
+                'headline.bottom': 'COME VISIT',
+                'offer.price': '$0.99/LB',
+                'offer.turnaround': 'Ready in 24 Hrs',
+                'offer.service': '80lb Washers',
+                'offer.reviews': '',
+                'cta.action': 'LEARN MORE \u2192',
+                'phase1.laundry': 'LAUNDROMATS',
+                'phase1.address': 'Springfield & Westfield, MA'
+            },
+            es: {
+                'phase1.headline1': 'NUEVA INSTALACI\u00d3N',
+                'phase1.headline2': 'VEN A VERNOS',
+                'phase1-5.text': 'NUEVA INSTALACI\u00d3N',
+                'brand.name': 'Wash Works',
+                'headline.top': 'NUEVA INSTALACI\u00d3N',
+                'headline.bottom': 'VEN A VERNOS',
+                'offer.price': '$0.99/LB',
+                'offer.turnaround': 'Lista en 24 Hrs',
+                'offer.service': 'Lavadoras de 80lb',
+                'offer.reviews': '',
+                'cta.action': 'M\u00c1S INFO \u2192',
+                'phase1.laundry': 'LAVANDERÍAS',
+                'phase1.address': 'Springfield y Westfield, MA'
+            }
+        };
+
+        function detectLanguage() {
+            var stored = localStorage.getItem('washworks-lang');
+            if (stored && (stored === 'en' || stored === 'es')) {
+                return stored;
+            }
+            var browserLang = navigator.language || navigator.userLanguage || 'en';
+            return browserLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+        }
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            localStorage.setItem('washworks-lang', lang);
+        }
+
+        setLanguage(detectLanguage());
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'setLang') { setLanguage(e.data.lang); }
+            if (e.data && e.data.type === 'restart') { restartAnimations(); }
+        });
+
+        document.getElementById("ad-container").addEventListener("click", function() {
+            window.open(clickTag, "_blank");
+        });
+
+        function restartAnimations() {
+            var container = document.querySelector(".ad-container");
+            var clone = container.cloneNode(true);
+            clone.id = "ad-container";
+            container.parentNode.replaceChild(clone, container);
+            setLanguage(detectLanguage());
+            clone.addEventListener("click", function() {
+                window.open(clickTag, "_blank");
+            });
+        }
+        
+        setInterval(restartAnimations, 15000);
+    </script>
+</body>
+</html>

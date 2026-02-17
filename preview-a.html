@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wash Works Display Ads (A: Brand Awareness)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0f0f1a; font-family: 'Roboto', sans-serif; padding: 40px 20px; min-height: 100vh; }
+        h1 { color: #FFFFFF; text-align: center; font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .subtitle { color: rgba(255,255,255,0.4); text-align: center; font-size: 14px; margin-bottom: 40px; }
+        .ad-section { margin-bottom: 48px; display: flex; flex-direction: column; align-items: center; }
+        .ad-label { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+        .ad-label span { color: #FFAB23; }
+        iframe { border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; display: block; }
+        .row { display: flex; gap: 40px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-bottom: 48px; }
+        .controls { text-align: center; margin-bottom: 32px; display: flex; gap: 12px; justify-content: center; }
+        .controls button { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); padding: 8px 20px; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .controls button:hover { background: rgba(255,255,255,0.15); }
+        .controls button.active { background: #FFAB23; color: #1A1A2E; border-color: #FFAB23; }
+        hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 0 auto 48px; max-width: 800px; }
+    </style>
+</head>
+<body>
+    <h1>Wash Works Display Ads</h1>
+    <p class="subtitle">DSP-Ready Preview &mdash; A: Brand Awareness &mdash; All 12 IAB Sizes</p>
+
+    <div class="controls">
+        <a href="preview-a.html" style="background: rgba(255,255,255,0.08); color: #FFAB23; border: 1px solid #FFAB23; padding: 8px 20px; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s;">&larr; View A: Brand Awareness</a>
+        <a href="preview-b.html" style="background: rgba(255,255,255,0.08); color: #FFAB23; border: 1px solid #FFAB23; padding: 8px 20px; border-radius: 4px; font-family: 'Roboto', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s;">&larr; View B: Service-Focused</a>
+    </div>
+
+    <div class="controls">
+        <button onclick="setLang('en')" id="btn-en" class="active">English</button>
+        <button onclick="setLang('es')" id="btn-es">Espa&ntilde;ol</button>
+        <button onclick="restartAll()">Restart Animations</button>
+    </div>
+
+    <!-- Horizontal ads -->
+    <div class="ad-section">
+        <div class="ad-label"><span>970x250</span> &mdash; Billboard</div>
+        <iframe src="a/970x250/index.html" width="970" height="250" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="ad-section">
+        <div class="ad-label"><span>970x90</span> &mdash; Super Leaderboard</div>
+        <iframe src="a/970x90/index.html" width="970" height="90" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="ad-section">
+        <div class="ad-label"><span>728x90</span> &mdash; Leaderboard</div>
+        <iframe src="a/728x90/index.html" width="728" height="90" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="ad-section">
+        <div class="ad-label"><span>468x60</span> &mdash; Full Banner</div>
+        <iframe src="a/468x60/index.html" width="468" height="60" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <div class="ad-section">
+        <div class="ad-label"><span>320x50</span> &mdash; Mobile Leaderboard</div>
+        <iframe src="a/320x50/index.html" width="320" height="50" scrolling="no" frameborder="0"></iframe>
+    </div>
+
+    <hr>
+
+    <!-- Medium rectangles row -->
+    <div class="row">
+        <div class="ad-section">
+            <div class="ad-label"><span>300x250</span> &mdash; Medium Rectangle</div>
+            <iframe src="a/300x250/index.html" width="300" height="250" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div class="ad-section">
+            <div class="ad-label"><span>336x280</span> &mdash; Large Rectangle</div>
+            <iframe src="a/336x280/index.html" width="336" height="280" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div class="ad-section">
+            <div class="ad-label"><span>250x250</span> &mdash; Square</div>
+            <iframe src="a/250x250/index.html" width="250" height="250" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Tall verticals row -->
+    <div class="row">
+        <div class="ad-section">
+            <div class="ad-label"><span>120x600</span> &mdash; Skyscraper</div>
+            <iframe src="a/120x600/index.html" width="120" height="600" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div class="ad-section">
+            <div class="ad-label"><span>160x600</span> &mdash; Wide Skyscraper</div>
+            <iframe src="a/160x600/index.html" width="160" height="600" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div class="ad-section">
+            <div class="ad-label"><span>300x600</span> &mdash; Half Page</div>
+            <iframe src="a/300x600/index.html" width="300" height="600" scrolling="no" frameborder="0"></iframe>
+        </div>
+        <div class="ad-section">
+            <div class="ad-label"><span>320x480</span> &mdash; Mobile Interstitial</div>
+            <iframe src="a/320x480/index.html" width="320" height="480" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            var iframes = document.querySelectorAll('iframe');
+            iframes.forEach(function(iframe) {
+                try { iframe.contentWindow.postMessage({ type: 'setLang', lang: lang }, '*'); } catch(e) {}
+            });
+        }
+
+        function restartAll() {
+            var iframes = document.querySelectorAll('iframe');
+            iframes.forEach(function(iframe) {
+                try { iframe.contentWindow.postMessage({ type: 'restart' }, '*'); } catch(e) { iframe.src = iframe.src; }
+            });
+        }
+    </script>
+</body>
+</html>
