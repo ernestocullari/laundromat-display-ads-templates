@@ -14,7 +14,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { width: 320px; height: 50px; overflow: hidden; }
-        .ad-container { width: 320px; height: 50px; background: #2E6B9E; position: relative; overflow: hidden; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; }
+        .ad-container { width: 320px; height: 50px; background: #5DADE2; position: relative; overflow: hidden; cursor: pointer; font-family: 'Barlow Condensed', sans-serif; }
         .phase1 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 10px; animation: phase1 4s ease-in-out forwards; }
         @keyframes phase1 { 0% { opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; } }
         .phase1-name { font-size: 18px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; white-space: nowrap; }
@@ -30,14 +30,14 @@
         .logo { filter: brightness(0) invert(1); width: 70px; height: auto; object-fit: contain; flex-shrink: 0; }
         .headline-stack { display: flex; flex-direction: column; line-height: 0.9; }
         .headline-stack .headline-white { font-size: 13px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; }
-        .headline-stack .headline-accent { font-size: 13px; font-weight: 800; color: #5DADE2; text-transform: uppercase; }
+        .headline-stack .headline-accent { font-size: 13px; font-weight: 800; color: #2E6B9E; text-transform: uppercase; }
         .center-group { display: flex; align-items: center; gap: 8px; opacity: 0; animation: fadeIn 0.4s ease-out 7.4s forwards; }
         .offer-item { text-align: center; }
         .offer-value { font-size: 14px; font-weight: 800; color: #FFFFFF; line-height: 1; }
         .offer-label { font-size: 7px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 2px; }
-        .cta-button { flex-shrink: 0; background: #5DADE2; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 7.5s forwards, pulse 2s ease-in-out 8s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(93,173,226, 0.6); } 50% { box-shadow: 0 0 0 6px rgba(93,173,226, 0); } 100% { box-shadow: 0 0 0 0 rgba(93,173,226, 0.6); } }
-        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, #5DADE2, #48C9B0); transform: scaleX(0); animation: growLine 0.5s ease-out 7.6s forwards; }
+        .cta-button { flex-shrink: 0; background: #2E6B9E; color: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 7.5s forwards, pulse 2s ease-in-out 8s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(46,107,158, 0.6); } 50% { box-shadow: 0 0 0 6px rgba(46,107,158, 0); } 100% { box-shadow: 0 0 0 0 rgba(46,107,158, 0.6); } }
+        .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, #2E6B9E, #48C9B0); transform: scaleX(0); animation: growLine 0.5s ease-out 7.6s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
         .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
         .bubble { position: absolute; bottom: -10px; background: rgba(255,255,255,0.22); border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); animation: floatUp linear infinite; }
@@ -57,7 +57,7 @@
         </div>
         <div class="phase2">
             <div class="left-group">
-                <img src="media/logo.png" alt="Logo" class="logo">
+                <img src="media/logo.png?v=2" alt="Logo" class="logo">
                 <div class="headline-stack">
                     <span class="headline-white" data-i18n="headline.top">DROP OFF</span>
                     <span class="headline-accent" data-i18n="headline.bottom">PICK-UP FRESH</span>
