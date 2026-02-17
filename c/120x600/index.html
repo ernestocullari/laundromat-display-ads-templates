@@ -26,15 +26,15 @@
         .brand-name { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
         @keyframes fadeIn { to { opacity: 1; } }
         .headline-top { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.3s forwards; }
-        .headline-top .headline-line { font-size: 28px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-top .headline-line + .headline-line { font-size: 20px; }
+        .headline-top .headline-line { font-size: 24px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
+        .headline-top .headline-line + .headline-line { font-size: 18px; }
         .headline-white { color: #FFFFFF; }
         .headline-accent { color: #2E6B9E; }
         .logo-section { order: -1; margin-bottom: 30px; opacity: 0; animation: fadeIn 0.5s ease-out 4.5s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
         .logo { filter: brightness(0) invert(1); width: 90px; height: auto; object-fit: contain; }
         .headline-bottom { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.7s forwards; }
-        .headline-bottom .headline-line { font-size: 18px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-bottom .headline-line + .headline-line { font-size: 44px; }
+        .headline-bottom .headline-line { font-size: 16px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
+        .headline-bottom .headline-line + .headline-line { font-size: 24px; }
         .offer-column { display: flex; flex-direction: column; align-items: center; gap: 16px; opacity: 0; animation: fadeIn 0.5s ease-out 4.9s forwards; }
         .offer-item { text-align: center; }
         .offer-value { font-size: 20px; font-weight: 800; color: #FFFFFF; line-height: 1; }
@@ -57,39 +57,39 @@
 </head>
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
-        <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
+        <div class="persistent-brand">ALAMO LAUNDRY</div>
         <div class="phase1">
             <div class="phase1-name">
-                <span class="phase1-word">WASH</span>
-                <span class="phase1-word">WORKS</span>
-                <span class="phase1-word-accent" data-i18n="phase1.laundry">LAUNDROMATS</span>
+                <span class="phase1-word">ALAMO</span>
+                <span class="phase1-word">LAUNDRY</span>
+                <span class="phase1-word-accent" data-i18n="phase1.laundry">LAUNDRY</span>
             </div>
-            <div class="phase1-address" data-i18n="phase1.address">Springfield &amp; Westfield, MA</div>
+            <div class="phase1-address" data-i18n="phase1.address">624 W Alamo St, Brenham, TX</div>
         </div>
         <div class="phase2">
             <div class="headline-top">
-                <div class="headline-line headline-white" data-i18n="headline.line1">HUGE</div>
-                <div class="headline-line headline-white" data-i18n="headline.line2">MACHINES</div>
+                <div class="headline-line headline-white" data-i18n="headline.line1">LAUNDRY</div>
+                <div class="headline-line headline-white" data-i18n="headline.line2">LOCKERS</div>
             </div>
             <div class="logo-section">
                 <img src="media/logo.png?v=2" alt="Logo" class="logo">
             </div>
             <div class="headline-bottom">
-                <div class="headline-line headline-accent" data-i18n="headline.line3">ONLY</div>
-                <div class="headline-line headline-accent" data-i18n="headline.line4">$12</div>
+                <div class="headline-line headline-accent" data-i18n="headline.line3">DROP OFF</div>
+                <div class="headline-line headline-accent" data-i18n="headline.line4">ANYTIME</div>
             </div>
             <div class="offer-column">
                 <div class="offer-item">
-                    <div class="offer-value" data-i18n="offer.days">$0.99/lb</div>
-                    <div class="offer-label" data-i18n="offer.hours">Ready in 24 Hrs</div>
+                    <div class="offer-value" data-i18n="offer.days">24/7 ACCESS</div>
+                    <div class="offer-label" data-i18n="offer.hours">Your schedule.</div>
                 </div>
                 <div class="offer-item">
-                    <div class="offer-value accent" data-i18n="offer.stars">80lb Washers</div>
+                    <div class="offer-value accent" data-i18n="offer.stars">Smart Lockers</div>
                     <div class="offer-label" data-i18n="offer.reviews">Every Day</div>
                 </div>
             </div>
-            <div class="address">Springfield, MA<br>Westfield, MA</div>
-            <button class="cta-button" data-i18n="cta.visit">VISIT US &#8594;</button>
+            <div class="address">Brenham, TX</div>
+            <button class="cta-button" data-i18n="cta.visit">DROP OFF ANYTIME &#8594;</button>
         </div>
         <div class="suds">
             <div class="suds-foam"></div>
@@ -104,41 +104,41 @@
     <script type="text/javascript">
         var translations = {
             en: {
-                'phase1.laundry': 'LAUNDROMATS',
-                'phase1.address': 'Springfield & Westfield, MA',
+                'phase1.laundry': 'LAUNDRY',
+                'phase1.address': '624 W Alamo St, Brenham, TX',
                 'brand.name': 'Alamo Laundry',
                 
-                'headline.line1': 'HUGE',
-                'headline.line2': 'MACHINES',
-                'headline.line3': 'ONLY',
-                'headline.line4': '$12',
-                'offer.days': '$0.99/lb',
-                'offer.hours': 'Ready in 24 Hrs',
-                'offer.stars': '80lb Washers',
+                'headline.line1': 'LAUNDRY',
+                'headline.line2': 'LOCKERS',
+                'headline.line3': 'DROP OFF',
+                'headline.line4': 'ANYTIME',
+                'offer.days': '24/7 ACCESS',
+                'offer.hours': 'Your schedule.',
+                'offer.stars': 'Smart Lockers',
                 'offer.reviews': 'Every Day',
-                'address': 'Springfield & Westfield, MA',
-                'cta.visit': 'VISIT US \u2192'
+                'address': '624 W Alamo St, Brenham, TX',
+                'cta.visit': 'DROP OFF ANYTIME \u2192'
             },
             es: {
-                'phase1.laundry': 'LAVANDERÍAS',
-                'phase1.address': 'Springfield y Westfield, MA',
+                'phase1.laundry': 'LAVANDERÍA',
+                'phase1.address': '624 W Alamo St, Brenham, TX',
                 'brand.name': 'Alamo Laundry',
                 
-                'headline.line1': 'MÁQUINAS',
-                'headline.line2': 'ENORMES',
-                'headline.line3': 'SOLO',
-                'headline.line4': '$12',
-                'offer.days': '$0.99/lb',
-                'offer.hours': 'Lista en 24 Hrs',
-                'offer.stars': 'Lavadoras de 80lb',
+                'headline.line1': 'CASILLEROS',
+                'headline.line2': 'INTELIGENTES',
+                'headline.line3': 'DEJA TU',
+                'headline.line4': 'ANYTIME',
+                'offer.days': '24/7 ACCESS',
+                'offer.hours': 'Tu horario.',
+                'offer.stars': 'Casilleros Inteligentes',
                 'offer.reviews': 'Todos los D\u00edas',
-                'address': 'Springfield y Westfield, MA',
-                'cta.visit': 'VIS\u00cdTENOS \u2192'
+                'address': '624 W Alamo St, Brenham, TX',
+                'cta.visit': 'DEJA TU ROPA \u2192'
             }
         };
 
         function detectLanguage() {
-            var stored = localStorage.getItem('washworks-lang');
+            var stored = localStorage.getItem('alamo-lang');
             if (stored && (stored === 'en' || stored === 'es')) {
                 return stored;
             }
@@ -153,7 +153,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            localStorage.setItem('washworks-lang', lang);
+            localStorage.setItem('alamo-lang', lang);
         }
 
         setLanguage(detectLanguage());

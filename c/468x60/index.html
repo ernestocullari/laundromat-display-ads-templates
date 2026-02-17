@@ -47,25 +47,26 @@
 </head>
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
-        <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
+        <div class="persistent-brand">ALAMO LAUNDRY</div>
         <div class="phase1">
-            <div class="phase1-name">WASH WORKS <span class="phase1-accent" data-i18n="phase1.laundry">LAUNDROMATS</span></div>
-            <div class="phase1-address" data-i18n="phase1.address">Springfield & Westfield, MA</div>
+            <div class="phase1-name">ALAMO <span class="phase1-accent" data-i18n="phase1.laundry">LAUNDRY</span></div>
+            <div class="phase1-address" data-i18n="phase1.address">624 W Alamo St, Brenham, TX</div>
         </div>
         <div class="phase1-5">
-            <span class="headline-text" data-i18n="phase1-5.text">HUGE MACHINES ONLY $12</span>
+            <span class="headline-text" data-i18n="phase1-5.text">LAUNDRY LOCKERS</span>
         </div>
         <div class="phase2">
             <div class="left-group">
                 <img src="media/logo.png?v=2" alt="Logo" class="logo">
                 <div class="headline-stack">
-                    <span class="headline-white" data-i18n="headline.top">HUGE MACHINES</span>
-                    <span class="headline-accent" data-i18n="headline.bottom">ONLY $12</span>
+                    <span class="headline-white" data-i18n="headline.top">LAUNDRY</span>
+                    <span class="headline-accent" data-i18n="headline.bottom">LOCKERS</span>
+                    <span class="headline-white" data-i18n="headline.line3" style="font-size:12px;">DROP OFF 24/7</span>
                 </div>
             </div>
             <div class="center-group">
                 <div class="offer-item">
-                    <div class="offer-value" data-i18n="offer.price">$0.99/LB</div>
+                    <div class="offer-value" data-i18n="offer.price">24/7 ACCESS</div>
                     <div class="offer-label" data-i18n="offer.turnaround">24 Hrs</div>
                 </div>
             </div>
@@ -82,35 +83,37 @@
     <script type="text/javascript">
         var translations = {
             en: {
-                'phase1.headline1': 'HUGE MACHINES ONLY $12',
+                'phase1.headline1': 'LAUNDRY LOCKERS',
                 'phase1.headline2': 'BIGGEST IN TOWN',
-                'phase1-5.text': 'HUGE MACHINES ONLY $12',
+                'phase1-5.text': 'LAUNDRY LOCKERS',
                 'brand.name': 'Alamo Laundry',
-                'headline.top': 'HUGE MACHINES',
-                'headline.bottom': 'ONLY $12',
-                'offer.price': '$0.99/LB',
+                'headline.top': 'LAUNDRY',
+                'headline.bottom': 'LOCKERS',
+                'headline.line3': 'DROP OFF 24/7',
+                'offer.price': '24/7 ACCESS',
                 'offer.turnaround': '24 Hrs',
                 'cta.action': 'VISIT \u2192',
-                'phase1.laundry': 'LAUNDROMATS',
-                'phase1.address': 'Springfield & Westfield, MA'
+                'phase1.laundry': 'LAUNDRY',
+                'phase1.address': '624 W Alamo St, Brenham, TX'
             },
             es: {
-                'phase1.headline1': 'MÁQUINAS ENORMES SOLO $12',
+                'phase1.headline1': 'CASILLEROS INTELIGENTES',
                 'phase1.headline2': 'LAS MÁS GRANDES',
-                'phase1-5.text': 'MÁQUINAS ENORMES SOLO $12',
+                'phase1-5.text': 'CASILLEROS INTELIGENTES',
                 'brand.name': 'Alamo Laundry',
-                'headline.top': 'MÁQUINAS ENORMES',
-                'headline.bottom': 'SOLO $12',
-                'offer.price': '$0.99/LB',
+                'headline.top': 'CASILLEROS',
+                'headline.bottom': 'INTELIGENTES',
+                'headline.line3': 'DEJA TU ROPA 24/7',
+                'offer.price': '24/7 ACCESS',
                 'offer.turnaround': '24 Hrs',
-                'cta.action': 'VIS\u00cdTENOS \u2192',
-                'phase1.laundry': 'LAVANDERÍAS',
-                'phase1.address': 'Springfield y Westfield, MA'
+                'cta.action': 'DEJA TU ROPA \u2192',
+                'phase1.laundry': 'LAVANDERÍA',
+                'phase1.address': '624 W Alamo St, Brenham, TX'
             }
         };
 
         function detectLanguage() {
-            var stored = localStorage.getItem('washworks-lang');
+            var stored = localStorage.getItem('alamo-lang');
             if (stored && (stored === 'en' || stored === 'es')) {
                 return stored;
             }
@@ -125,7 +128,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
-            localStorage.setItem('washworks-lang', lang);
+            localStorage.setItem('alamo-lang', lang);
         }
 
         setLanguage(detectLanguage());
