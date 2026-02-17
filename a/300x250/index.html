@@ -28,25 +28,29 @@
         .logo { width: 140px; height: auto; object-fit: contain; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
         .badge { display: inline-block; background: #FFAB23; color: #FFFFFF; padding: 3px 10px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 2px; opacity: 0; animation: fadeIn 0.4s ease-out 4.4s forwards; }
         .headline-group { margin: auto 0; opacity: 0; animation: fadeIn 0.4s ease-out 4.5s forwards; text-align: center; }
-        0 }
+        .headline-line { font-size: 26px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.02em; }
         .headline-white { color: #2C5A9E; }
         .headline-accent { color: #FFAB23; }
         .offer-text { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.85); text-align: center; line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 4.6s forwards; }
         .cta-button { margin-top: auto; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; padding: 9px 20px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.4s ease-out 4.8s forwards, pulse 2s ease-in-out 6s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35, 0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35, 0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35, 0.6); } }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
         .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.5s ease-out 5s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
-        .suds { position: absolute; bottom: 3px; left: 0; width: 100%; height: 80px; z-index: 1; pointer-events: none; overflow: visible; }
-        .suds-foam { position: absolute; bottom: 0; left: -3%; width: 106%; height: 28px; background: rgba(255,255,255,0.15); border-radius: 60% 60% 0 0 / 100% 100% 0 0; animation: foamWave 4s ease-in-out infinite alternate; }
-        .suds-foam:nth-child(2) { height: 20px; left: 3%; width: 98%; background: rgba(255,255,255,0.10); animation-delay: -1.5s; animation-duration: 5s; }
-        .suds-pop { position: absolute; bottom: 16px; border-radius: 50%; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.35); animation: sudsPop ease-out infinite; }
-        @keyframes foamWave { 0% { transform: translateX(-2%); } 100% { transform: translateX(2%); } }
-        @keyframes sudsPop { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 0.8; transform: translateY(-50px) scale(0.7); } 100% { opacity: 0; transform: translateY(-70px) scale(0.3); } }
+        .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+        .bubble { position: absolute; bottom: -20px; background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; animation: floatUp linear infinite; }
+        @keyframes floatUp { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-300px) translateX(20px); opacity: 0; } }
             .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .address, .divider { display: none !important; }
     </style>
 </head>
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
+        <div class="bubbles">
+            <div class="bubble" style="width:25px;height:25px;left:10%;animation-duration:5.5s;animation-delay:0s;"></div>
+            <div class="bubble" style="width:18px;height:18px;left:30%;animation-duration:4.5s;animation-delay:1.2s;"></div>
+            <div class="bubble" style="width:35px;height:35px;left:50%;animation-duration:6.5s;animation-delay:0.5s;"></div>
+            <div class="bubble" style="width:20px;height:20px;left:72%;animation-duration:5s;animation-delay:2s;"></div>
+            <div class="bubble" style="width:30px;height:30px;left:88%;animation-duration:7s;animation-delay:1s;"></div>
+        </div>
         <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
         <div class="phase1">
             <div class="phase1-name"><span class="phase1-line1">WASH WORKS</span><span class="phase1-line2" data-i18n="phase1.laundry">LAUNDROMATS</span></div>
@@ -54,21 +58,13 @@
         </div>
         <div class="phase2">
             <img src="media/logo.png" alt="Logo" class="logo">
-            <div class="badge" data-i18n="badge.stars">80lb Washers</div>
+            <div class="badge" data-i18n="badge.stars">Fully Attended</div>
             <div class="headline-group">
-                <div class="headline-line headline-white" data-i18n="headline.see">BRAND NEW FACILITY</div>
-                <div class="headline-line headline-accent" data-i18n="headline.difference">COME VISIT</div>
+                <div class="headline-line headline-white" data-i18n="headline.see">NEWLY</div>
+                <div class="headline-line headline-accent" data-i18n="headline.difference">RENOVATED</div>
             </div>
-            <p class="offer-text" data-i18n="offer.text">From $0.99/lb &#8226; Ready in 24 Hrs</p>
-            <button class="cta-button" data-i18n="cta.visit">LEARN MORE &#8594;</button>
-        </div>
-        <div class="suds">
-            <div class="suds-foam"></div>
-            <div class="suds-foam"></div>
-            <div class="suds-pop" style="width:20px;height:20px;left:12%;animation-duration:3.5s;animation-delay:0s;"></div>
-            <div class="suds-pop" style="width:15px;height:15px;left:38%;animation-duration:4s;animation-delay:1.5s;"></div>
-            <div class="suds-pop" style="width:25px;height:25px;left:60%;animation-duration:3s;animation-delay:0.8s;"></div>
-            <div class="suds-pop" style="width:18px;height:18px;left:82%;animation-duration:4.2s;animation-delay:2.5s;"></div>
+            <p class="offer-text" data-i18n="offer.text">Open 6 AM – 10 PM &#8226; Every Day</p>
+            <button class="cta-button" data-i18n="cta.visit">FIND A LOCATION &#8594;</button>
         </div>
         <div class="bottom-accent"></div>
     </div>
@@ -77,26 +73,26 @@
             en: {
                 'phase1.laundry': 'LAUNDROMATS',
                 'phase1.address': 'Springfield & Westfield, MA',
-                'phase1.text': "Drop it off dirty, pick it up fresh \u2014 we do the washing for you",
-                'phase1.tagline': 'Huge Machines. Only $12.',
+                'phase1.text': "Your neighborhood laundromat",
+                'phase1.tagline': 'See the Difference.',
                 'brand.name': 'Wash Works',
-                'badge.stars': '80lb Washers',
-                'headline.see': 'BRAND NEW FACILITY',
-                'headline.difference': 'COME VISIT',
-                'offer.text': 'From $0.99/lb \u2022 Ready in 24 Hrs',
-                'cta.visit': 'LEARN MORE \u2192'
+                'badge.stars': 'Fully Attended',
+                'headline.see': 'NEWLY',
+                'headline.difference': 'RENOVATED',
+                'offer.text': 'Open 6 AM \u2013 10 PM \u2022 Every Day',
+                'cta.visit': 'FIND A LOCATION \u2192'
             },
             es: {
                 'phase1.laundry': 'LAVANDERÍAS',
                 'phase1.address': 'Springfield y Westfield, MA',
-                'phase1.text': 'D\u00e9jala sucia, rec\u00f3gela limpia \u2014 nosotros lavamos por ti',
-                'phase1.tagline': 'Máquinas Enormes. Solo $12.',
+                'phase1.text': 'Tu lavander\u00eda de barrio',
+                'phase1.tagline': 'Vea la Diferencia.',
                 'brand.name': 'Wash Works',
-                'badge.stars': 'Lavadoras de 80lb',
-                'headline.see': 'NUEVA INSTALACI\u00d3N',
-                'headline.difference': 'VEN A VERNOS',
-                'offer.text': 'Desde $0.99/lb \u2022 Lista en 24 Hrs',
-                'cta.visit': 'M\u00c1S INFO \u2192'
+                'badge.stars': 'Totalmente Atendida',
+                'headline.see': 'RECIÉN',
+                'headline.difference': 'RENOVADA',
+                'offer.text': 'Abierto 6 AM \u2013 10 PM \u2022 Todos los D\u00edas',
+                'cta.visit': 'ENCONTRAR UBICACI\u00d3N \u2192'
             }
         };
 

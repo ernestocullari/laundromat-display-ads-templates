@@ -26,18 +26,16 @@
         .brand-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.15em; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
         @keyframes fadeIn { to { opacity: 1; } }
         .badge { display: inline-block; background: #FFAB23; color: #FFFFFF; padding: 5px 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 2px; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
-        .headline-top { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.4s forwards; }
-        .headline-top .headline-line { font-size: 48px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-top .headline-line + .headline-line { font-size: 40px; }
+        .headline-top { margin-bottom: -18px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.4s forwards; }
+        .headline-top .headline-line { font-size: 42px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .headline-white { color: #2C5A9E; }
         .headline-accent { color: #FFAB23; }
-        .logo-section { order: -1; margin-bottom: 40px; opacity: 0; animation: fadeIn 0.5s ease-out 4.6s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
+        .logo-section { order: -1; margin-bottom: 50px; opacity: 0; animation: fadeIn 0.5s ease-out 4.6s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
         .logo { width: 160px; height: auto; object-fit: contain; }
         .sparkle { position: absolute; top: -6px; right: -12px; font-size: 16px; color: #FFAB23; animation: sparkleRotate 3s ease-in-out 5.5s infinite; }
         @keyframes sparkleRotate { 0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; } 50% { transform: rotate(180deg) scale(1.2); opacity: 0.7; } }
-        .headline-bottom { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.8s forwards; }
-        .headline-bottom .headline-line { font-size: 28px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-bottom .headline-line + .headline-line { font-size: 58px; }
+        .headline-bottom { text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.8s forwards; }
+        .headline-bottom .headline-line { font-size: 42px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .offer-row { display: flex; align-items: center; justify-content: center; gap: 18px; opacity: 0; animation: fadeIn 0.5s ease-out 5.0s forwards; }
         .offer-item { text-align: center; }
         .offer-value { font-size: 22px; font-weight: 800; color: #FFFFFF; line-height: 1; }
@@ -46,7 +44,7 @@
         .divider { width: 1px; height: 30px; background: rgba(255,171,35,0.3); }
         .cta-button { order: 2; width: 100%; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 20px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.5s ease-out 5.2s forwards, pulse 2s ease-in-out 6.5s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
-        .address { margin-top: auto; font-size: 18px; font-weight: 600; color: #192226; text-align: center; opacity: 0; animation: fadeIn 0.4s ease-out 5.2s forwards; }
+        .address { margin-top: auto; font-size: 18px; font-weight: 600; color: #192226; text-align: center; margin-top: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 5.2s forwards; }
         .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.6s ease-out 5.4s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
 
@@ -71,18 +69,16 @@
             <div class="phase1-address" data-i18n="phase1.address">Springfield &amp; Westfield, MA</div>
         </div>
         <div class="phase2">
-            <div class="badge" data-i18n="badge.attended">80lb Washers</div>
+            <div class="badge" data-i18n="badge.attended">Wash &amp; Fold</div>
             <div class="headline-top">
-                <div class="headline-line headline-white" data-i18n="headline.line1">WASH &</div>
-                <div class="headline-line headline-white" data-i18n="headline.line2">FOLD</div>
+                <div class="headline-line headline-white" data-i18n="headline.see">DROP OFF</div>
             </div>
             <div class="logo-section">
                 <img src="media/logo.png" alt="Logo" class="logo">
                 <span class="sparkle">&#10022;</span>
             </div>
             <div class="headline-bottom">
-                <div class="headline-line headline-accent" data-i18n="headline.line3">ONLY</div>
-                <div class="headline-line headline-accent" data-i18n="headline.line4">$0.99/LB</div>
+                <div class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</div>
             </div>
             <div class="offer-row">
                 <div class="offer-item">
@@ -91,7 +87,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="offer-item">
-                    <div class="offer-value accent" data-i18n="offer.stars">80lb Washers</div>
+                    <div class="offer-value accent" data-i18n="offer.stars">Wash &amp; Fold</div>
                     <div class="offer-label" data-i18n="offer.reviews">Every Day</div>
                 </div>
             </div>
@@ -115,14 +111,12 @@
                 'phase1.laundry': 'LAUNDROMATS',
                 'phase1.address': 'Springfield & Westfield, MA',
                 'brand.name': 'Wash Works',
-                'badge.attended': '80lb Washers',
-                'headline.line1': 'WASH &',
-                'headline.line2': 'FOLD',
-                'headline.line3': 'ONLY',
-                'headline.line4': '$0.99/LB',
+                'badge.attended': 'Wash & Fold',
+                'headline.see': 'DROP OFF',
+                'headline.difference': 'PICK UP FRESH',
                 'offer.days': '$0.99/lb',
                 'offer.hours': 'Ready in 24 Hrs',
-                'offer.stars': '80lb Washers',
+                'offer.stars': 'Wash & Fold',
                 'offer.reviews': 'Every Day',
                 'address': 'Springfield & Westfield, MA',
                 'cta.visit': 'TRY IT TODAY \u2192'
@@ -131,17 +125,15 @@
                 'phase1.laundry': 'LAVANDERÍAS',
                 'phase1.address': 'Springfield y Westfield, MA',
                 'brand.name': 'Wash Works',
-                'badge.attended': 'Lavadoras de 80lb',
-                'headline.line1': 'LAVAR Y',
-                'headline.line2': 'DOBLAR',
-                'headline.line3': 'SOLO',
-                'headline.line4': '$0.99/LB',
+                'badge.attended': 'Lavado y Doblado',
+                'headline.see': 'DEJE SU ROPA',
+                'headline.difference': 'REC\u00d3JALA FRESCA',
                 'offer.days': '$0.99/lb',
                 'offer.hours': 'Lista en 24 Hrs',
-                'offer.stars': 'Lavadoras de 80lb',
+                'offer.stars': 'Lavado y Doblado',
                 'offer.reviews': 'Todos los D\u00edas',
                 'address': 'Springfield y Westfield, MA',
-                'cta.visit': 'PRU\u00c9BALO HOY \u2192'
+                'cta.visit': 'PRU\u00c9BELO HOY \u2192'
             }
         };
 

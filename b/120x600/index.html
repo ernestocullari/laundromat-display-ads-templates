@@ -21,20 +21,18 @@
         .phase1-word-accent { font-size: 14px; font-weight: 800; color: #FFAB23; text-transform: uppercase; letter-spacing: -0.03em; margin-top: 4px; }
         .phase1.address { margin-top: auto; font-size: 9px; font-weight: 600; color: #192226; margin-top: 16px; line-height: 1.4; }
         .persistent-brand { position: absolute; top: 8px; left: 0; width: 100%; text-align: center; font-size: 7px; font-weight: 800; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; z-index: 10; pointer-events: none; }
-        .phase2 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 30px; padding: 25px 12px 50px; opacity: 0; background: #FFFFFF; animation: phase2 11s ease-out 4s forwards; }
+        .phase2 { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 24px; padding: 25px 12px 50px; opacity: 0; background: #FFFFFF; animation: phase2 11s ease-out 4s forwards; }
         @keyframes phase2 { 0% { opacity: 0; } 10% { opacity: 1; } 100% { opacity: 1; } }
         .brand-name { font-size: 9px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
         @keyframes fadeIn { to { opacity: 1; } }
-        .headline-top { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.3s forwards; }
-        .headline-top .headline-line { font-size: 28px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-top .headline-line + .headline-line { font-size: 20px; }
+        .headline-top { margin-bottom: -18px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.3s forwards; }
+        .headline-top .headline-line { font-size: 20px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .headline-white { color: #2C5A9E; }
         .headline-accent { color: #FFAB23; }
-        .logo-section { order: -1; margin-bottom: 30px; opacity: 0; animation: fadeIn 0.5s ease-out 4.5s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
+        .logo-section { order: -1; margin-bottom: 50px; opacity: 0; animation: fadeIn 0.5s ease-out 4.5s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
         .logo { width: 90px; height: auto; object-fit: contain; }
-        .headline-bottom { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.7s forwards; }
-        .headline-bottom .headline-line { font-size: 18px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-bottom .headline-line + .headline-line { font-size: 44px; }
+        .headline-bottom { text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.7s forwards; }
+        .headline-bottom .headline-line { font-size: 16px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .offer-column { display: flex; flex-direction: column; align-items: center; gap: 16px; opacity: 0; animation: fadeIn 0.5s ease-out 4.9s forwards; }
         .offer-item { text-align: center; }
         .offer-value { font-size: 20px; font-weight: 800; color: #FFFFFF; line-height: 1; }
@@ -68,15 +66,13 @@
         </div>
         <div class="phase2">
             <div class="headline-top">
-                <div class="headline-line headline-white" data-i18n="headline.line1">WASH &</div>
-                <div class="headline-line headline-white" data-i18n="headline.line2">FOLD</div>
+                <div class="headline-line headline-white" data-i18n="headline.see">DROP OFF</div>
             </div>
             <div class="logo-section">
                 <img src="media/logo.png" alt="Logo" class="logo">
             </div>
             <div class="headline-bottom">
-                <div class="headline-line headline-accent" data-i18n="headline.line3">ONLY</div>
-                <div class="headline-line headline-accent" data-i18n="headline.line4">$0.99/LB</div>
+                <div class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</div>
             </div>
             <div class="offer-column">
                 <div class="offer-item">
@@ -84,7 +80,7 @@
                     <div class="offer-label" data-i18n="offer.hours">Ready in 24 Hrs</div>
                 </div>
                 <div class="offer-item">
-                    <div class="offer-value accent" data-i18n="offer.stars">80lb Washers</div>
+                    <div class="offer-value accent" data-i18n="offer.stars">Wash &amp; Fold</div>
                     <div class="offer-label" data-i18n="offer.reviews">Every Day</div>
                 </div>
             </div>
@@ -108,13 +104,11 @@
                 'phase1.address': 'Springfield & Westfield, MA',
                 'brand.name': 'Wash Works',
                 
-                'headline.line1': 'WASH &',
-                'headline.line2': 'FOLD',
-                'headline.line3': 'ONLY',
-                'headline.line4': '$0.99/LB',
+                'headline.see': 'DROP OFF',
+                'headline.difference': 'PICK UP FRESH',
                 'offer.days': '$0.99/lb',
                 'offer.hours': 'Ready in 24 Hrs',
-                'offer.stars': '80lb Washers',
+                'offer.stars': 'Wash & Fold',
                 'offer.reviews': 'Every Day',
                 'address': 'Springfield & Westfield, MA',
                 'cta.visit': 'TRY IT TODAY \u2192'
@@ -123,17 +117,15 @@
                 'phase1.laundry': 'LAVANDERÍAS',
                 'phase1.address': 'Springfield y Westfield, MA',
                 'brand.name': 'Wash Works',
-
-                'headline.line1': 'LAVAR Y',
-                'headline.line2': 'DOBLAR',
-                'headline.line3': 'SOLO',
-                'headline.line4': '$0.99/LB',
+                
+                'headline.see': 'DEJE SU ROPA',
+                'headline.difference': 'REC\u00d3JALA FRESCA',
                 'offer.days': '$0.99/lb',
                 'offer.hours': 'Lista en 24 Hrs',
-                'offer.stars': 'Lavadoras de 80lb',
+                'offer.stars': 'Lavado y Doblado',
                 'offer.reviews': 'Todos los D\u00edas',
                 'address': 'Springfield y Westfield, MA',
-                'cta.visit': 'PRU\u00c9BALO HOY \u2192'
+                'cta.visit': 'PRU\u00c9BELO HOY \u2192'
             }
         };
 

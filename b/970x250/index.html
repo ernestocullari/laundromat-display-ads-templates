@@ -45,7 +45,7 @@
         /* Center */
         .center { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 10px; }
         .headline-group { opacity: 0; animation: fadeIn 0.4s ease-out 4.4s forwards; }
-        .headline-line { font-size: 52px; font-weight: 800; text-transform: uppercase; line-height: 1; letter-spacing: 0.02em; display: block; }
+        .headline-line { font-size: 30px; font-weight: 800; text-transform: uppercase; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
         .headline-white { color: #2C5A9E; }
         .headline-accent { color: #FFAB23; }
         .sub-headline { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); line-height: 1.3; opacity: 0; animation: fadeIn 0.4s ease-out 4.5s forwards; }
@@ -88,14 +88,13 @@
                 <img src="media/logo.png" alt="Logo" class="logo">
                 <div class="stars-row">
                     <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    <span class="stars-text" data-i18n="badge.attended">80lb Washers</span>
+                    <span class="stars-text" data-i18n="badge.attended">Wash & Fold</span>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="center">
                 <div class="headline-group">
-                    <div class="headline-line headline-white" data-i18n="headline.see">WASH & FOLD</div>
-                    <div class="headline-line headline-accent" data-i18n="headline.difference">ONLY $0.99/LB</div>
+                    <span class="headline-line headline-white" data-i18n="headline.see">DROP OFF </span><span class="headline-line headline-accent" data-i18n="headline.difference">PICK UP FRESH</span>
                 </div>
                 <div class="sub-headline" data-i18n="subhead">Drop off your clothes, pick them up fresh and folded</div>
                 <div class="props-row">
@@ -135,15 +134,15 @@
         var translations = {
             en: {
                 'phase1.text': 'Drop it off dirty, pick it up fresh \u2014 we do the washing for you',
-                'phase1.tagline': 'Wash & Fold. Only $0.99/lb.',
+                'phase1.tagline': 'Try Wash & Fold.',
                 'brand.name': 'Wash Works',
-                'headline.see': 'WASH & FOLD',
-                'headline.difference': 'ONLY $0.99/LB',
+                'headline.see': 'DROP OFF',
+                'headline.difference': 'PICK UP FRESH',
                 'subhead': 'Drop off your clothes, pick them up fresh and folded',
                 'prop.attended': 'From $0.99/lb',
                 'prop.renovated': 'Same-Day Available',
                 'prop.bilingual': 'Hablamos Espa\u00f1ol',
-                'badge.attended': '80lb Washers',
+                'badge.attended': 'Wash & Fold',
                 'offer.text': 'From $0.99/lb \u2022 Ready in 24 Hrs',
                 'cta.action': 'TRY IT TODAY \u2192',
                 'address': 'Springfield & Westfield, MA',
@@ -152,17 +151,17 @@
             },
             es: {
                 'phase1.text': 'D\u00e9jala sucia, rec\u00f3gela limpia \u2014 nosotros lavamos por ti',
-                'phase1.tagline': 'Lavar y Doblar. Solo $0.99/lb.',
+                'phase1.tagline': 'Pruebe Lavado y Doblado.',
                 'brand.name': 'Wash Works',
-                'headline.see': 'LAVAR Y DOBLAR',
-                'headline.difference': 'SOLO $0.99/LB',
+                'headline.see': 'DEJE SU ROPA',
+                'headline.difference': 'REC\u00d3JALA FRESCA',
                 'subhead': 'Deje su ropa, rec\u00f3jala fresca y doblada',
                 'prop.attended': 'Desde $0.99/lb',
                 'prop.renovated': 'Mismo D\u00eda Disponible',
                 'prop.bilingual': 'Hablamos Espa\u00f1ol',
-                'badge.attended': 'Lavadoras de 80lb',
+                'badge.attended': 'Lavado y Doblado',
                 'offer.text': 'Desde $0.99/lb \u2022 Lista en 24 Hrs',
-                'cta.action': 'PRU\u00c9BALO HOY \u2192',
+                'cta.action': 'PRU\u00c9BELO HOY \u2192',
                 'address': 'Springfield y Westfield, MA',
                 'phase1.laundry': 'LAVANDERÍAS',
                 'phase1.address': 'Springfield y Westfield, MA'

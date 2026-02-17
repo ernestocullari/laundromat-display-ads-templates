@@ -26,18 +26,16 @@
         .brand-name { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.15em; opacity: 0; animation: fadeIn 0.4s ease-out 4.2s forwards; white-space: nowrap; }
         @keyframes fadeIn { to { opacity: 1; } }
         .badge { display: inline-block; background: #FFAB23; color: #FFFFFF; padding: 5px 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 2px; opacity: 0; animation: fadeIn 0.4s ease-out 4.3s forwards; }
-        .headline-top { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.4s forwards; }
-        .headline-top .headline-line { font-size: 48px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-top .headline-line + .headline-line { font-size: 40px; }
+        .headline-top { margin-bottom: -18px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.4s forwards; }
+        .headline-top .headline-line { font-size: 42px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .headline-white { color: #2C5A9E; }
         .headline-accent { color: #FFAB23; }
-        .logo-section { order: -1; margin-bottom: 40px; opacity: 0; animation: fadeIn 0.5s ease-out 4.6s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
+        .logo-section { order: -1; margin-bottom: 50px; opacity: 0; animation: fadeIn 0.5s ease-out 4.6s forwards; position: relative; display: flex; align-items: center; justify-content: center; }
         .logo { width: 160px; height: auto; object-fit: contain; }
         .sparkle { position: absolute; top: -6px; right: -12px; font-size: 16px; color: #FFAB23; animation: sparkleRotate 3s ease-in-out 5.5s infinite; }
         @keyframes sparkleRotate { 0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; } 50% { transform: rotate(180deg) scale(1.2); opacity: 0.7; } }
-        .headline-bottom { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.8s forwards; }
-        .headline-bottom .headline-line { font-size: 28px; font-weight: 800; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.02em; }
-        .headline-bottom .headline-line + .headline-line { font-size: 58px; }
+        .headline-bottom { text-align: center; opacity: 0; animation: fadeIn 0.5s ease-out 4.8s forwards; }
+        .headline-bottom .headline-line { font-size: 42px; font-weight: 800; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.02em; }
         .offer-row { display: flex; align-items: center; justify-content: center; gap: 18px; opacity: 0; animation: fadeIn 0.5s ease-out 5.0s forwards; }
         .offer-item { text-align: center; }
         .offer-value { font-size: 22px; font-weight: 800; color: #FFFFFF; line-height: 1; }
@@ -46,21 +44,27 @@
         .divider { width: 1px; height: 30px; background: rgba(255,171,35,0.3); }
         .cta-button { order: 2; width: 100%; background: #FFAB23; color: #FFFFFF; font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 20px; border: none; border-radius: 6px; cursor: pointer; opacity: 0; animation: fadeIn 0.5s ease-out 5.2s forwards, pulse 2s ease-in-out 6.5s infinite; }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } 50% { box-shadow: 0 0 0 8px rgba(255,171,35,0); } 100% { box-shadow: 0 0 0 0 rgba(255,171,35,0.6); } }
-        .address { margin-top: auto; font-size: 18px; font-weight: 600; color: #192226; text-align: center; opacity: 0; animation: fadeIn 0.4s ease-out 5.2s forwards; }
+        .address { margin-top: auto; font-size: 18px; font-weight: 600; color: #192226; text-align: center; margin-top: 6px; opacity: 0; animation: fadeIn 0.4s ease-out 5.2s forwards; }
         .bottom-accent { position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #FFAB23, #42B6ED); transform: scaleX(0); animation: growLine 0.6s ease-out 5.4s forwards; }
         @keyframes growLine { to { transform: scaleX(1); } }
 
-        .suds { position: absolute; bottom: 3px; left: 0; width: 100%; height: 90px; z-index: 1; pointer-events: none; overflow: visible; }
-        .suds-foam { position: absolute; bottom: 0; left: -3%; width: 106%; height: 32px; background: rgba(255,255,255,0.15); border-radius: 60% 60% 0 0 / 100% 100% 0 0; animation: foamWave 4s ease-in-out infinite alternate; }
-        .suds-foam:nth-child(2) { height: 22px; left: 3%; width: 100%; background: rgba(255,255,255,0.10); animation-delay: -1.5s; animation-duration: 5s; }
-        .suds-pop { position: absolute; bottom: 22px; border-radius: 50%; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.35); animation: sudsPop ease-out infinite; }
-        @keyframes foamWave { 0% { transform: translateX(-2%); } 100% { transform: translateX(2%); } }
-        @keyframes sudsPop { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 1; } 75% { opacity: 0.8; transform: translateY(-50px) scale(0.7); } 100% { opacity: 0; transform: translateY(-75px) scale(0.3); } }
+        .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+        .bubble { position: absolute; bottom: -20px; background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; animation: floatUp linear infinite; }
+        @keyframes floatUp { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-550px) translateX(25px); opacity: 0; } }
             .badge, .offer-text, .brand-name, .persistent-brand, .stars-row, .stars-text, .sub-headline, .props-row, .tagline, .divider, .offer-column, .offer-row { display: none !important; }
     </style>
 </head>
 <body>
     <div class="ad-container" id="ad-container" onclick="window.open(clickTag, '_blank')">
+        <div class="bubbles">
+            <div class="bubble" style="width:30px;height:30px;left:8%;animation-duration:6s;animation-delay:0s;"></div>
+            <div class="bubble" style="width:20px;height:20px;left:25%;animation-duration:5s;animation-delay:1.5s;"></div>
+            <div class="bubble" style="width:45px;height:45px;left:42%;animation-duration:7.5s;animation-delay:0.5s;"></div>
+            <div class="bubble" style="width:25px;height:25px;left:60%;animation-duration:5.5s;animation-delay:2.2s;"></div>
+            <div class="bubble" style="width:50px;height:50px;left:78%;animation-duration:8s;animation-delay:0.8s;"></div>
+            <div class="bubble" style="width:18px;height:18px;left:90%;animation-duration:4.5s;animation-delay:3s;"></div>
+            <div class="bubble" style="width:35px;height:35px;left:35%;animation-duration:6.5s;animation-delay:2.5s;"></div>
+        </div>
         <div class="persistent-brand">WASH WORKS LAUNDROMATS</div>
         <div class="phase1">
             <div class="phase1-name">
@@ -71,41 +75,30 @@
             <div class="phase1-address" data-i18n="phase1.address">Springfield &amp; Westfield, MA</div>
         </div>
         <div class="phase2">
-            <div class="badge" data-i18n="badge.attended">80lb Washers</div>
+            <div class="badge" data-i18n="badge.attended">Fully Attended</div>
             <div class="headline-top">
-                <div class="headline-line headline-white" data-i18n="headline.line1">BRAND NEW</div>
-                <div class="headline-line headline-white" data-i18n="headline.line2">FACILITY</div>
+                <div class="headline-line headline-white" data-i18n="headline.see">NEWLY</div>
             </div>
             <div class="logo-section">
                 <img src="media/logo.png" alt="Logo" class="logo">
                 <span class="sparkle">&#10022;</span>
             </div>
             <div class="headline-bottom">
-                <div class="headline-line headline-accent" data-i18n="headline.line3">COME</div>
-                <div class="headline-line headline-accent" data-i18n="headline.line4">VISIT</div>
+                <div class="headline-line headline-accent" data-i18n="headline.difference">RENOVATED</div>
             </div>
             <div class="offer-row">
                 <div class="offer-item">
-                    <div class="offer-value" data-i18n="offer.days">$0.99/lb</div>
-                    <div class="offer-label" data-i18n="offer.hours">Ready in 24 Hrs</div>
+                    <div class="offer-value" data-i18n="offer.days">OPEN 7 DAYS</div>
+                    <div class="offer-label" data-i18n="offer.hours">6 AM &#8211; 10 PM</div>
                 </div>
                 <div class="divider"></div>
                 <div class="offer-item">
-                    <div class="offer-value accent" data-i18n="offer.stars">80lb Washers</div>
+                    <div class="offer-value accent" data-i18n="offer.stars">Fully Attended</div>
                     <div class="offer-label" data-i18n="offer.reviews">Every Day</div>
                 </div>
             </div>
-            <button class="cta-button" data-i18n="cta.visit">LEARN MORE &#8594;</button>
+            <button class="cta-button" data-i18n="cta.visit">FIND A LOCATION &#8594;</button>
             <div class="address">Springfield, MA<br>Westfield, MA</div>
-        </div>
-        <div class="suds">
-            <div class="suds-foam"></div>
-            <div class="suds-foam"></div>
-            <div class="suds-pop" style="width:20px;height:20px;left:10%;animation-duration:3.5s;animation-delay:0s;"></div>
-            <div class="suds-pop" style="width:14px;height:14px;left:30%;animation-duration:4s;animation-delay:1.8s;"></div>
-            <div class="suds-pop" style="width:25px;height:25px;left:50%;animation-duration:3s;animation-delay:0.8s;"></div>
-            <div class="suds-pop" style="width:16px;height:16px;left:70%;animation-duration:4.5s;animation-delay:2.2s;"></div>
-            <div class="suds-pop" style="width:18px;height:18px;left:88%;animation-duration:3.8s;animation-delay:3s;"></div>
         </div>
         <div class="bottom-accent"></div>
     </div>
@@ -115,33 +108,29 @@
                 'phase1.laundry': 'LAUNDROMATS',
                 'phase1.address': 'Springfield & Westfield, MA',
                 'brand.name': 'Wash Works',
-                'badge.attended': '80lb Washers',
-                'headline.line1': 'BRAND NEW',
-                'headline.line2': 'FACILITY',
-                'headline.line3': 'COME',
-                'headline.line4': 'VISIT',
-                'offer.days': '$0.99/lb',
-                'offer.hours': 'Ready in 24 Hrs',
-                'offer.stars': '80lb Washers',
+                'badge.attended': 'Fully Attended',
+                'headline.see': 'NEWLY',
+                'headline.difference': 'RENOVATED',
+                'offer.days': 'OPEN 7 DAYS',
+                'offer.hours': '6 AM \u2013 10 PM',
+                'offer.stars': 'Fully Attended',
                 'offer.reviews': 'Every Day',
                 'address': 'Springfield & Westfield, MA',
-                'cta.visit': 'LEARN MORE \u2192'
+                'cta.visit': 'FIND A LOCATION \u2192'
             },
             es: {
                 'phase1.laundry': 'LAVANDERÍAS',
                 'phase1.address': 'Springfield y Westfield, MA',
                 'brand.name': 'Wash Works',
-                'badge.attended': 'Lavadoras de 80lb',
-                'headline.line1': 'NUEVA',
-                'headline.line2': 'INSTALACI\u00d3N',
-                'headline.line3': 'VEN A',
-                'headline.line4': 'VERNOS',
-                'offer.days': '$0.99/lb',
-                'offer.hours': 'Lista en 24 Hrs',
-                'offer.stars': 'Lavadoras de 80lb',
+                'badge.attended': 'Totalmente Atendida',
+                'headline.see': 'RECIÉN',
+                'headline.difference': 'RENOVADA',
+                'offer.days': 'ABIERTO 7 D\u00cdAS',
+                'offer.hours': '6 AM \u2013 10 PM',
+                'offer.stars': 'Totalmente Atendida',
                 'offer.reviews': 'Todos los D\u00edas',
                 'address': 'Springfield y Westfield, MA',
-                'cta.visit': 'M\u00c1S INFO \u2192'
+                'cta.visit': 'ENCONTRAR UBICACI\u00d3N \u2192'
             }
         };
 
